@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box ödev 1</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        html,body{
+            padding: 0;
+        }
+        /*=================*/
+        .border{
+            border: 4px solid black;
+        }
+        .container{
+            margin: 20px auto;
+            width: 1000px;
+            height: 500px;
+            background: gray;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .box1{
+            width: 40%;
+            height: 80%;
+            background: red;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .bx1{
+            padding: 5px 10px 0px 0px;
+            width: 90%;
+            height: 30%;
+            background: green;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        .bx2{
+            width: 90%;
+            height: 60%;
+            background: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .b1{
+            width: 50%;
+            height: 90%;
+            background: yellow;
+            display: flex;
+            align-items: end;
+        }
+        .b2{
+            width: 30%;
+            height: 40%;
+            background: yellow;
+            display: flex;
+            justify-content: end;
+        }
+        .hiddiv1{
+            width: 40%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: end;
+        }
+        .box2{
+            width: 100%;
+            height: 45%;
+            background: red;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .bx3{
+            padding: 4px;
+            width: 30%;
+            height: 80%;
+            background: green;
+            display: flex;
+            justify-content: end;
+            align-items: end;
+        }
+        .bx4{
+            width: 30%;
+            height: 80%;
+            background: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .b3{
+            width: 45%;
+            height: 45%;
+            background: yellow;
+        }
+        .box3{
+            padding-bottom: 10px;
+            width: 50%;
+            height: 45%;
+            background: red;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        .bx5{
+            width: 90%;
+            height: 45%;
+            background: green;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        .b4{
+            margin-right: 5px;
+            width: 40%;
+            height: 90%;
+            background: yellow;
+        }
+        .m1{
+            margin: 5px;
+            width: 40%;
+            height: 40%;
+            background: purple;
+        }
+        .m2{
+            margin: 5px;
+            width: 40%;
+            height: 40%;
+            background: purple;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container border">
+            <div class="box1 border">
+                <div class="bx1 border">
+                    <div class="b1 border">
+                        <div class="m1 border"></div>
+                    </div>
+                </div>
+                <div class="bx2 border">
+                    <div class="b2 border">
+                        <div class="m2 border"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hiddiv1">
+                <div class="box2 border">
+                    <div class="bx3 border">
+                        <div class="b3 border"></div>
+                    </div>
+                    <div class="bx4 border">
+                        <div class="b3 border"></div>
+                    </div>
+                </div>
+                <div class="box3 border">
+                    <div class="bx5 border">
+                        <div class="b4 border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

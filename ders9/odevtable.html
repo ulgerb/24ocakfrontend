@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev Table</title>
+    <style>
+        .table1{
+           border-radius: 30px;
+        }
+        .table2{
+            width: 800px;
+            height: 500px;
+        }
+        
+        td{
+            width: 100px;
+            min-height: 50px;
+            box-sizing: border-box;
+        }
+        .rtl{
+            border-top-left-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <table class="table1" border="5px" width="800px" height="300px">
+        <tr>
+            <td class="rtl" rowspan="2" colspan="3">box</td>
+            <td rowspan="2" colspan="2">box</td>
+            <td rowspan="4">box</td>
+            <td>box</td>
+            <td>box</td>
+            
+        </tr>
+        <tr>
+            
+            <td>box</td>
+            <td>box</td>
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="5">box</td>
+            <td colspan="2">box</td>
+            
+        </tr>
+        <tr>
+            <td colspan="2">box</td>
+            
+        </tr>
+    </table>
+
+    <table class="table2" border="10px">
+        <tr>
+            <th colspan="6" style="text-align: left;">Burası Table 2</th>
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="2">Box</td>
+            <td colspan="3">Box</td>
+            <td>Box</td>
+           
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="2">Box</td>
+            <td rowspan="2" colspan="2">Box</td>
+           
+            
+            
+        </tr>
+        <tr>
+            <td rowspan="2">Box</td>
+            <td rowspan="2">Box</td>
+        </tr>
+        <tr>
+            <td colspan="4">Box</td>
+        </tr>
+    </table>
+    
+</body>
+</html>

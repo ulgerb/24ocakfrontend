@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kutular</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        html,body{
+            padding: 0;
+        }
+        .border{
+            border: 4px solid black;
+        }
+        .container{
+            width: 1000px;
+            height: 500px;
+            background: peru;
+        }
+        .hid1{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hid2{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        .box1{
+            width: 330px;
+            height: 200px;
+            background: chocolate;
+        }
+        .bx1{
+            margin: 10px;
+            width: 80px;
+            height: 60px;
+            background: lightgreen;
+        }
+        .box2{
+            width: 600px;
+            height: 200px;
+            background: chocolate;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bx2{
+            margin: 0px 10px;
+            width: 180px;
+            height: 140px;
+            background: lightgreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .b1{
+            width: 80px;
+            height: 60px;
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <div class="container border">
+            <div class="hid1">
+                <div class="box1 border">
+                    <div class="bx1 border"></div>
+                    <div class="hid2">
+                        <div class="bx1 border"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hid2">
+                <div class="box2 border">
+                    <div class="bx2 border"></div>
+                    <div class="bx2 border">
+                        <div class="b1 border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

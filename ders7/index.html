@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DERS 7</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        .circle{
+            width: 200px;
+            height: 200px;
+            border: 10px solid black;
+            background: red;
+            border-radius: 50%;
+        }
+        .div2{
+            width: 100px;
+            height: 300px;
+            border-left: 10px solid black;
+            border-right: 5px solid black;
+            background: blue;
+        }
+        .div3{
+            width: 400px;
+            height: 100px;
+            margin: 50px 0px 100px 80px;
+            border: 4px solid black;
+            background: green;
+        }
+        .text{
+            width: 400px;
+            font-size: 26px; /* Yazı Büyüklüğü */
+            font-weight: 900; /* yazı kalınlığını ayarlar */
+            line-height: 40px; /* yazı yüksekliğini ayarlar */
+            letter-spacing: 1px; /* harf aralıklarını ayarlar */
+            color: rgba(54, 55, 115, 1); /* yazıya renk verir */
+            font-family: 'Poppins', sans-serif; /* yazı ailesini ayarlar */
+            text-shadow: -2px 5px 16px red; /* yazıya gölge ayarı */
+            text-align: end; /* yazı konumlandırma */
+            font-style: oblique; /* eğik yazı */
+            text-transform: uppercase; /* yazının büyük küçük harf olmasını ayarlar */
+            text-decoration: overline; /* yazıya çizgi çeker */
+            white-space: pre-line; /* yazının olduğu gibi veya yan yazılmasını ayarlar */
+            background: burlywood;
+        }
+        .divbg{
+            width: 300px;
+            height: 400px;
+            background: url('download.jpg');
+            /*background-position: 80px 50px;*/
+            background-repeat: no-repeat;
+            border: 5px solid black;
+            background-size: contain;
+            
+        }
+        body{
+            background: url('download.jpg');
+            background-repeat: no-repeat; /* tekrar etme ayarı */
+            
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            background: chocolate;
+            margin: 100px auto;
+            box-shadow: 12px 12px 10px 0px rgba(0, 0, 0, 0.4);
+        }
+        .box1{
+            width: 300px;
+            height: 300px;
+            background: rgba(71, 61, 139, 0.278);
+            margin: 100px auto;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 4px, rgba(0, 0, 0, 0.3) 0px 12px 13px -3px, rgba(0, 0, 0, 0.2) 0px -6px 0px inset;
+            transition: .8s;
+        }
+        .box1:hover{
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 6px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <h2>ÖDEV DERS 7</h2>
+        <li>p etiketi içerisinde width 400, yazı ortalansın, yazı rengi mavi, yazı eğik, ve üstü çizili</li>
+        <li>div etiketi yazı shadow özellik verilsin yazı yüksekliği 2katı olucak harf aralıları 2px olucak</li>
+        
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut natus qui illum reiciendis, illo dolores a fuga facilis laboriosam architecto esse ab ipsam cum odio. Quod dolorem totam corporis, fugit id, cum dolorum fuga ab sunt aliquid magnam. Provident, animi.
+    </ul>
+    
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div>
+        <h2>Background</h2>
+        <div class="divbg"></div>
+    </div>
+    <br>
+    <div>
+        <h2>Font css</h2>
+        <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea magnam necessitatibus laudantium maiores. Tempore, iusto quas quo nesciunt at impedit reiciendis natus 
+            
+            dolorem, magnam dignissimos cupiditate nisi officia iure soluta, non illum quasi quia voluptate excepturi mollitia eos labore! Quis eaque iusto fugit dolorum, incidunt debitis labore temporibus! Quasi qui modi ad suscipit? Sint architecto ea doloribus temporibus eos </p>
+    </div>
+    
+    <h2>ÖDEV</h2>
+    <ul>
+        <li>1 daire olucak arkaplan red border 10px, width height 200px</li>
+        <li>arkaplan blue borderleft 10px right 5px, width 100 height 300 </li>
+        <li>arkaplan green border 4px, margin left 80,botom 100,top 50, width 400 hwight 100</li>
+    </ul>
+
+    <div class="circle"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+
+</body>
+</html>

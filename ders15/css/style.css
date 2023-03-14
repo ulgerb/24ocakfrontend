@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    padding: 0;
+}
+
+/* HEADER START */
+.header {
+    width: 100%;
+    background: orange;
+    box-shadow: 0px 5px 8px #00000030;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    /* z düzeleminde üste almak için kullanılır */
+}
+
+.main-nav {
+    /*display: flex;
+            justify-content: center;*/
+}
+
+.nav-list {
+    list-style: none;
+    /* listedeki noktaları veya numaraları kaldırır */
+    display: flex;
+}
+
+.nav-link {
+    padding: 20px 20px;
+    text-decoration: none;
+    /* a etiketindeki altı çizili kaldırır */
+    color: black;
+    font-size: 2em;
+}
+
+.nav-link:hover {
+    background: #00000090;
+    color: white;
+    transition: all 0.3s;
+    /* animasyon yada hareketleri yavaşlatır */
+}
+
+/* HEADER END */
+
+/* MAIN START */
+.box {
+    width: 300px;
+    height: 200px;
+    background: cadetblue;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background: darkred;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+}
+
+.box3 {
+    border: 4px solid black;
+    position: sticky;
+    bottom: 30%;
+    left: 30%;
+}
+
+.box4 {
+    border: 4px solid black;
+    position: sticky;
+    bottom: 50px;
+    background: red;
+}
+
+.box5 {
+    border: 4px solid black;
+    transition: all 1s;
+}
+
+.box5:hover {
+    /* fare ile üzerine geldiğin olmasını istediğimiz css özellikleri içerisine yazarız */
+    width: 100%;
+    background: gold;
+    border: 0;
+    font-size: 50px;
+    color: brown;
+}
+
+/* MAIN END */
+
+/* FOOTER START */
+.footer {
+    width: 100%;
+    height: 400px;
+    background: #1e1e1e;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.footer ul {}
+
+.footer .footer-line {}
+
+.footer-list {
+    list-style-type: none;
+    padding: 100px 0px 0px 300px;
+}
+
+.footer-title {
+    color: orangered;
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: overline;
+}
+
+.footer-link {
+    padding: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: orange;
+}
+
+.footer-line {
+    margin: 80px 0px 0px 20%;
+    width: 2px;
+    height: 200px;
+    background: orangered;
+}
+
+/* FOOTER END */

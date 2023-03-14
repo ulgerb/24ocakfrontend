@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Örnek</title>
+</head>
+<body>
+    <h2>Kaydol</h2>
+    <form action="">
+        <label for="name">Ad:</label><br>
+        <input type="text" id="name" placeholder="Adınızı Giriniz"><br>
+        <label for="surname">Soyad:</label><br>
+        <input type="text" id="surname" placeholder="Soyadınızı Giriniz"><br>
+        <label for="telephone">Telefon:</label><br>
+        <input type="tel" id="telephone" placeholder="+90 555 55 55"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" placeholder="example@gmail.com"><br>
+        <label for="username">Kullanıcı Adı:</label><br>
+        <input type="text" id="username" placeholder="Kullanıcı Adı Giriniz"><br>
+        <label for="password">Şifre</label><br>
+        <input type="password" id="password" placeholder="Şifreyi Giriniz"><br>
+        <label for="passwordre">Yeniden Şifre</label><br>
+        <input type="password" id="passwordre" placeholder="Yeniden Şifreyi Giriniz">
+        <br><br>
+        <label for="from">Ülke Seçiniz:</label><br>
+        <select id="from">
+            <option value="0">Türkiye</option>
+            <option value="1" disabled>İngiltere</option>
+            <option value="2" selected>Fransa</option>
+            <option value="3">Amerika</option>
+            <option value="4">Belçika</option>
+        </select><br>
+        <input type="checkbox" id="software">
+        <label for="software">Javascript</label>
+        <br>
+        <input type="checkbox" id="job">
+        <label for="job">Yazılımcı</label>
+        <br>
+        <label>Cinsiyet:</label>
+        <input type="radio" name="cinsiyet" id="erkek">
+        <label for="erkek">Erkek</label>
+        <input type="radio" name="cinsiyet" id="kadın">
+        <label for="kadın">Kadın</label><br><br>
+        <input type="reset" value="Yenile">
+        <button type="submit">Gönder</button>
+        
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev 2 box</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        html,body{
+            padding: 0;
+        }
+        /*============*/
+        .border{
+            border: 4px solid black;
+        }
+        .container{
+            width: 1200px;
+            height: 700px;
+            border: 4px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .box1{
+            padding: 20px 20px 0px 20px;
+            width: 45%;
+            height: 100%;
+            background: orange;
+        }
+        .box2{
+            width: 45%;
+            height: 100%;
+            background: orange;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .box3{
+            width: 90%;
+            height: 30%;
+            background: orange;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .hidbox{
+            width: 90%;
+            height: 60%;
+            display: flex;
+            justify-content: space-between;
+        }
+        /*BOX 1*/
+        .bx1{
+            padding-top: 10px;
+            width: 40%;
+            height: 40%;
+            background: peru;
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        .hiddiv1{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bx2{
+            width: 40%;
+            height: 90%;
+            background: peru;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .bx3{
+            width: 40%;
+            height: 90%;
+            background: peru;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /*BOX 2*/
+        .bx4{
+            width: 30%;
+            height: 90%;
+            background: peru;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hiddiv2{
+            width: 60%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .bx5{
+            padding-left: 33%;
+            width: 100%;
+            height: 30%;
+            background: peru;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .hiddiv3{
+            width: 100%;
+            height: 30%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .bx6{
+            width: 45%;
+            height: 100%;
+            background: peru;
+        }
+        /*BOX 3*/
+        .bx7{
+            width: 15%;
+            height: 90%;
+            background: peru;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bx8{
+            width: 15%;
+            height: 90%;
+            background: peru;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .bx9{
+            width: 15%;
+            height: 90%;
+            background: peru;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .bx10{
+            width: 15%;
+            height: 90%;
+            background: peru;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        /* b divler */
+        .b1{
+            width: 40%;
+            height: 90%;
+            background: gray;
+        }
+        .b2{
+            width: 40%;
+            height: 40%;
+            background: gray;
+        }
+        .b3{
+            width: 80%;
+            height: 40%;
+            background: gray;
+
+        }
+        .b4{
+            width: 50%;
+            height: 90%;
+            background: gray;
+
+        }
+        .b5{
+            width: 90%;
+            height: 50%;
+            background: gray;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .x2{
+            width: 40%;
+            height: 80%;
+            background: green;
+        }
+        .hiddiv4{
+            width: 45%;
+            height: 90%;
+            display: flex;
+            align-items: end;
+        }
+        .hiddiv5{
+            width: 45%;
+            height: 90%;
+        }
+        .b6{
+            width: 100%;
+            height: 30%;
+            background: gray;
+
+        }
+        .b7{
+            width: 50%;
+            height: 45%;
+            background: gray;
+        }
+        .b8{
+            width: 90%;
+            height: 30%;
+            background: gray;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        .x1{
+            margin-right: 5px;
+            width: 30%;
+            height: 80%;
+            background: green;
+        }
+        .b9{
+            width: 40%;
+            height: 90%;
+            background: gray;
+        }
+        .b10{
+            width: 100%;
+            height: 40%;
+            background: gray;
+        }
+        .hiddiv6{
+            width: 40%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .b11{
+            width: 90%;
+            height: 40%;
+            background: gray;
+        }
+        .b12{
+            width: 40%;
+            height: 40%;
+            background: gray;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="hidbox">
+                <div class="box1 border">
+                    <div class="bx1 border">
+                        <div class="b1 border"></div>
+                        <div class="b2 border"></div>
+                    </div>
+                    <div class="hiddiv1">
+                        <div class="bx2 border">
+                            <div class="b3 border"></div>
+                            <div class="b3 border"></div>
+                        </div>
+                        <div class="bx3 border">
+                            <div class="b4 border"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2 border">
+                    <div class="bx4 border">
+                        <div class="b5 border">
+                            <div class="x2 border"></div>
+                            <div class="x2 border"></div>
+                        </div>
+                    </div>
+                    <div class="hiddiv2">
+                        <div class="bx5 border">
+                            <div class="hiddiv4">
+                                <div class="b6 border"></div>
+                            </div>
+                            <div class="hiddiv5">
+                                <div class="b6 border"></div>
+                            </div>
+                        </div>
+                        <div class="bx5 border"></div>
+                        <div class="hiddiv3">
+                            <div class="bx6 border"></div>
+                            <div class="bx6 border"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box3 border">
+                <div class="bx7 border">
+                    <div class="b7 border"></div>
+                </div>
+                <div class="bx8 border">
+                    <div class="b8 border"></div>
+                    <div class="b8 border">
+                        <div class="x1 border"></div>
+                    </div>
+                </div>
+                <div class="bx9 border">
+                    <div class="b9 border"></div>
+                    <div class="hiddiv6">
+                        <div class="b10 border"></div>
+                        <div class="b10 border"></div>
+                    </div>
+                </div>
+                <div class="bx10 border">
+                    <div class="b11 border"></div>
+                    <div class="b12 border"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

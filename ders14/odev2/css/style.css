@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+html,body{
+    padding: 0;
+}
+.container{
+    margin: 10px auto;
+    width: 800px;
+    border: 4px solid black;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: burlywood;
+    overflow: hidden;
+    background-image: url(../img/icons/facebook-color-svgrepo-com\ \(2\).svg);
+}
+
+.btn{
+    margin: 30px;
+}
+.btn button{
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    background: cadetblue;
+    color: antiquewhite;
+    font-size: 30px;
+}
+
+.social-con{
+    margin-bottom: 30px;
+    display: flex;
+    
+}
+.social-con .social{
+    margin: 5px 10px;
+    width: 40px;
+    height: 40px;
+}
+.social-con .social img{
+    width: 100%;
+    height: 100%;
+}
+
+.img-con{
+    width: 100%;
+}
+.img-con img{
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.text-con{
+    padding: 30px 60px;
+    text-align: center;
+
+}
+.text-con p{}

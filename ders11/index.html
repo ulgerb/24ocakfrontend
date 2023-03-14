@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        html,body{
+            padding: 0;
+        }
+        .container{
+            display: flex;
+        }
+        .odev{
+            margin: 10px;
+            width: 600px;
+            height: 400px;
+            border: 4px solid black;
+            background: #d8b7b7;
+        }
+        .box1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bx1{
+            margin: 2px;
+            width: 150px;
+            height: 150px;
+            border: 4px solid black;
+            background: dodgerblue;
+        }
+        
+        .box2{
+            padding: 20px 5px 0px 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box3{
+            padding-bottom: 10px;
+            display: flex;
+            align-items: end;
+            justify-content: space-around;
+        }
+        .box4{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .bx2{
+            padding: 0px 10px;
+            width: 90%;
+            height: 180px;
+            border: 4px solid black;
+            background: chocolate;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bx3hidden{
+            width: 90%;
+            display: flex;
+            justify-content: end;
+        }
+        .b1{
+            width: 200px;
+            height: 180px;
+            border: 4px solid black;
+            background: darkslateblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .b2{
+            width: 90px;
+            height: 60px;
+            border: 4px solid black;
+            background: darkolivegreen;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <div class="container">
+            <div class="odev box1">
+                <div class="bx1"></div>
+                <div class="bx1"></div>
+            </div>
+            <div class="odev box2">
+                <div class="bx1"></div>
+                <div class="bx1"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="odev box3">
+                <div class="bx1"></div>
+                <div class="bx1"></div>
+                <div class="bx1"></div>
+            </div>
+            <div class="odev box4">
+                <div class="bx2">
+                    <div class="bx1"></div>
+                    <div class="bx1"></div>
+                </div>
+                <div class="bx3hidden">
+                    <div class="b1">
+                        <div class="b2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

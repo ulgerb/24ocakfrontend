@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        html,body{
+            padding: 0;
+            background: cadetblue;
+        }
+        .container{
+            margin: 50px auto;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: yellow;
+            position: relative;
+        }
+        .box1{
+            width: 400px;
+            height: 200px;
+            border: 4px solid black;
+            background: red;
+            position: relative;
+            /*
+            top: 50px;
+            bottom: 50px;
+            left: 50px;
+            right: 50px;
+            */
+        }
+        .box2{
+            width: 400px;
+            height: 200px;
+            border: 4px solid black;
+            background: green;
+            position: absolute;
+            bottom: 150px;
+        }
+        .box3{
+            width: 400px;
+            height: 200px;
+            border: 4px solid black;
+            background: blue;
+            position: absolute;
+            right: -100px;
+        }
+        .box4{
+            width: 400px;
+            height: 200px;
+            border: 4px solid black;
+            background: chocolate;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <div class="container">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box4"></div>
+        </div>
+    </main>
+    
+</body>
+</html>
