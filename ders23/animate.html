@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate ÖDEV</title>
+    <style>
+        .dropdown{
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+        }
+        .dropdown:hover ul{
+            display: block;
+        }
+        .dropdown>h4{
+            padding: 5px 10px;
+            margin: 0;
+            border: 4px solid black;
+            border-radius: 10px;
+            background: brown;
+            color: white;
+            text-shadow: 2px 2px 4px #00000030;
+        }
+        .dropdown>ul{
+            height: 100px;
+            padding: 20px 10px;
+            margin: 40px 0px 0px 10px;
+            list-style-type: none;
+            border: 2px solid black;
+            background: #222;
+            box-shadow: 2px 2px 6px #22222260;
+            position: absolute;
+            display: none;
+            animation: dropdown .8s reverse;
+            overflow: hidden;
+        }
+        @keyframes dropdown {
+            100%{
+                height: 0px;
+            }
+        }
+        .dropdown>ul>li{
+            padding: 5px 10px;
+            color: white;
+            text-shadow: 2px 2px 4px #00000030;
+        }
+        .load-animate{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .load{
+            width: 40px;
+            position: absolute;
+            display: flex;
+            justify-content: end;
+        }
+        .load1{animation: box1 6s infinite reverse ease-out;}
+        .load2{animation: box1 6s .5s infinite reverse ease-out;}
+        .load3{animation: box1 6s 1s infinite reverse ease-out;}
+        .load4{animation: box1 6s 1.5s infinite reverse ease-out;}
+        .load5{animation: box1 6s 2s infinite reverse ease-out;}
+        .load .box1{
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+        }
+        
+        .load .box2{
+
+        }
+        @keyframes box1 {
+            0%{
+                opacity: 0;
+                transform: rotate(0);
+            }
+            5%{
+                opacity: 1;
+            }
+            50%{
+                transform: rotate(360deg);
+            }
+            65%{
+                transform: translate(-30px);
+            }
+            100%{
+                transform: scale(.1);
+            }
+        }
+
+        .text-con{
+            color: chocolate;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.335);
+            text-align: center;
+        }
+        .text-con span{
+            position: absolute;
+        }
+        .text-con>span:nth-child(1){
+            margin-left: -70px;
+            animation: text1 1s reverse;
+        }
+        .text-con>span:nth-child(2){
+            margin-left: 0px;
+            animation: text2 1.5s reverse;
+            
+        }
+        .text-con>span:nth-child(3){
+            margin-left: 50px;
+            animation: text3 3s reverse;
+        }
+        
+        @keyframes text1 {
+            100%{
+                transform: translate(-400px);
+            }
+        }
+        @keyframes text2 {
+            100%{
+                transform: translate(0px, 100px);
+                scale: 8;
+            }
+        }
+        @keyframes text3 {
+            30%{
+                transform: rotate(360deg);
+            }
+            100%{
+                transform: translate(0px, 100px);
+                scale: 6;
+            }
+        }
+
+
+        
+        .box-con{
+            display: flex;
+            justify-content: space-around;
+        }
+        .boxx{
+            width: 200px; height: 200px; background: #222; border: 2px solid white;
+        }
+
+        @media screen and (max-width:1000px) {
+            body{
+                background: orange;
+            }
+            .box-con{
+                display: block;
+            }
+            .boxx{
+                width: 500px;
+                transition: all 2s;
+            }
+        }
+        
+        
+    </style>
+</head>
+<body>
+
+    <div class="box-con">
+        <div class="boxx" style=""></div>
+        <div class="boxx" style=""></div>
+        <div class="boxx" style=""></div>
+        <div class="boxx" style=""></div>
+    </div>
+    
+    
+    <h2>ÖDEV:dropdown butonu yada linki yapılıcak </h2>
+    <h2>ÖDEV: load bekleme animasyonu</h2>
+    <h2>ÖDEV:hareketli yada kayan yazı </h2>
+    <h1>ÖDEV 3</h1>
+    <h4 class="text-con">
+        <span>Merhaba</span>
+        <span>kayan</span>
+        <span>yazı</span>
+    </h4>
+    
+
+    <h1>ÖDEV 2</h1>
+    <div style="width: 200px; height: 200px; background: #222;">
+        <div class="load-animate">
+            <div class="load load1">
+                <div class="box1"></div>
+            </div>
+            <div class="load load2">
+                <div class="box1"></div>
+            </div>
+            <div class="load load3">
+                <div class="box1"></div>
+            </div>
+            <div class="load load4">
+                <div class="box1"></div>
+            </div>
+            <div class="load load5">
+                <div class="box1"></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <h1>ÖDEV 1</h1>
+    <div class="dropdown">
+        <h4>Product</h4>
+        <ul>
+            <a href="asdads">
+                <li>MADDE 1</li>
+            </a>
+            <li>MADDE 2</li>
+            <li>MADDE 3</li>
+            <li>MADDE 4</li>
+        </ul>
+    </div>
+    <ul>
+        <li>asd</li>
+        <li>asd</li>
+        <li>asd</li>
+        <li>asd</li>
+    </ul>
+
+    
+</body>
+</html>

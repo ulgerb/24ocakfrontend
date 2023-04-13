@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMATION</title>
+
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+    }
+    html,body{
+        padding: 0;
+    }
+    .container{
+        width: 100%;
+        min-height: 200px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .balls-con{}
+    .balls{
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main:hover .balls{
+        animation: balls 2s infinite cubic-bezier(0.65,-0.39, 0.44, 1.42);
+    }
+
+    @keyframes balls {
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    
+    .ball1{
+        width: 50px;
+        height: 50px;
+        border: 4px solid black;
+        background: red;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(30px, 20px);
+    }
+    .ball2{
+        width: 50px;
+        height: 50px;
+        border: 4px solid black;
+        background: green;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-30px, 20px);
+    }
+    .ball3{
+        width: 50px;
+        height: 50px;
+        border: 4px solid black;
+        background: blue;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(0px, -30px);
+    }
+
+    /* ======================= */
+
+    .animate-con{
+        margin-top: -50px;
+        margin-bottom: 100px;
+        width: 100%;
+        height: 500px;
+        overflow-x: hidden;
+    }
+    .animate{
+        width: 220%;
+        height: 400px;
+        display: flex;
+    }
+    .night{
+        width: 50%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(122, 122, 122, 0.537) 7%, rgba(56,56,56,0.9951533469833246) 20%, rgba(41,41,41,0.9951533469833246) 75%, rgba(0,0,0,0.9951533469833246) 126%);
+        background-position: -40px -100px;
+    }
+    .moon{
+        position: relative;
+        rotate: -30deg;
+        top: 50px;
+        left: 42%;
+        width: 90px;
+    }
+    .moon img{
+        width: 100%;
+    }
+    .morning{
+        width: 50%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(204,157,29,0.9951533469833246) 7%, rgba(195,184,131,0.9951533469833246) 12%, rgba(192,179,49,0.9951533469833246) 21%, rgba(255,245,141,0.9951533469833246) 126%);
+        background-position: -30px -80px;
+    }
+    .sun{
+        position: relative;
+        rotate: -30deg;
+        top: 60px;
+        left: 42.5%;
+        width: 120px;
+    }
+    .sun img{
+        width: 100%;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        transform: translate(0px, 450px);
+    }
+    .btn button{
+        padding: 10px 20px;
+        border-radius: 20px;
+        background: #525252;
+    }
+    .btn:hover+.animate{
+        animation: morning 4s forwards cubic-bezier(0, 0, 0.25, 1.36);
+    }
+    @keyframes morning {
+        100%{
+            transform: translate(-50%);
+        }
+    }
+</style>
+    
+</head>
+<body>
+
+
+    
+    
+<main>
+    <div class="container">
+
+
+        <div class="animate-con">
+            <div class="btn">
+                <button type="button">Gündüz</button>
+            </div>
+            <div class="animate">
+                <div class="night">
+                    <div class="moon">
+                        <img src="img/moon.svg" alt="">
+                    </div>
+                </div>
+                <div class="morning">
+                    <div class="sun">
+                        <img src="img/sunn.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <h2>ÖDEV:dropdown butonu yada linki yapılıcak </h2>
+        <h2>ÖDEV:hareketli yada kayan yazı </h2>
+        <h2>ÖDEV: load bekleme animasyonu</h2>
+
+        
+        <div class="balls-con">
+            <div class="balls">
+                <div class="ball1"></div>
+                <div class="ball2"></div>
+                <div class="ball3"></div>
+            </div>
+        </div>
+        
+    </div>
+</main>
+    
+</body>
+</html>

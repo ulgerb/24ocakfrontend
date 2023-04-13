@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector transform</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        html,body{
+            padding: 0;
+        }
+        .container{
+            width: 100%;
+            background: #222;
+        }
+        .nav-list{
+            display: flex;
+            align-items: center;
+        }
+        .nav-list a{
+            margin: 20px;
+            display: inline-flex;
+            position: relative;
+        }
+        .nav-list a:nth-child(2){
+            background: rgb(109, 139, 0);
+        }
+        .nav-list a:nth-child(2):hover{
+            padding: 20px;
+        }
+        .nav-list a:first-child{
+            background: darkmagenta;
+        }
+        .nav-list a:last-child{
+            background: rgb(0, 139, 32);
+        }
+        .nav-list a:link{
+            color: red;
+        }
+        .nav-list a:visited{
+            color: chocolate;
+        }
+        .nav-list a:active{
+            color: aqua;
+        }
+        .nav-list a:hover{
+            background: blue;
+        }
+        .nav-list a::after{
+            content: "";
+            width: 100%;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.232);
+            position: absolute;
+        }
+        .form{
+            padding: 50px;
+        }
+        .form input::placeholder{
+            color: red;
+            background: #28342d;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background: cornflowerblue;
+            border: #222 solid 4px;
+            margin: 5px;
+            transition: all 2s;
+            
+        }
+        .box1-con{
+            perspective: 800px;
+            display: flex;
+            justify-content: center;
+        }
+        .box1{
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        .box1::after{
+            content: "Merhaba transform";
+            width: 50px !important;
+            height: 98px;
+            background: rgb(100, 237, 136);
+            border: 2px solid black;
+            position: absolute;
+            top: -4px;
+            right: 0;
+            transform: translate3d(30px, 0px, -24px) rotateY(90deg) ;
+        }
+        .box1:hover{
+            transform: translate( 100px, -100px ); /* iteleme */
+            transform: scale(0.8); /* büyütüp küçültme */
+            transform: skewY(45deg); /* sündürme yada çekme */
+            transform: rotateY(245deg); /* döndürme */
+        }
+        .conbox .box:first-child:hover{
+            transform: translate3d(100px, 10px, 5px);
+        }
+        .conbox .box:nth-child(2):hover{
+            transform: rotateX(150deg) rotateY(50deg) rotateZ(350deg);
+        }
+        .conbox .box:nth-child(3){
+            overflow: hidden;
+        }
+        .conbox .box:nth-child(3) img{
+            width: 100%;
+            height: 100%;
+            transition: 1s;
+        }
+        .conbox .box:nth-child(3):hover img{
+            transform: scale(1.4);
+        }
+        .conbox .box:nth-child(4):hover{
+            transform: skew(60deg);
+        }
+        .conbox .box:nth-child(5):hover{
+            transform: translate(400px, -20px) rotate(600deg);
+        }
+        .conbox .box:last-child:hover{
+            transform: translate(600px, 10px) rotateX(300deg) rotateY(50deg) rotateZ(760deg) scale(2) skew(40deg);
+        }
+        .div-con{
+            width: 100%;
+            height: 500px;
+        }
+        .div-con>div{
+            width: 100px;
+            height: 100px;
+            background: #9b4a4a;
+            border: #222 4px solid;
+        }
+        .div-con>div>div{
+            width: 50px;
+            height: 50px;
+            background: chartreuse;
+            border: #222 4px solid;
+            
+        }
+        .div-con>div>div>div{
+            width: 20px;
+            height: 20px;
+            background: #000;
+        }
+        h2::first-line{
+            color: red;
+        }
+        .span{
+            color: blue;
+        }
+        .boxdiv{
+            width: 100px;
+            height: 100px;
+            background: #c69e9e;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        <span class="span">Delectus ea obcaecati ipsa ipsam quasi voluptatum</span>
+        architecto distinctio. Laborum, temporibus numquam!</h2>
+    
+    <div class="div-con">
+        <div>
+            <div></div>
+        </div>
+        <div></div>
+        <div></div>
+        <div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="boxdiv">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam laborum ipsum, sit officiis esse rem illum praesentium perferendis voluptate. Magni rem a suscipit modi, reiciendis inventore vero nesciunt? Accusantium dignissimos odit unde expedita quidem, inventore incidunt explicabo atque cum. Quod neque nam natus eum nisi fugiat a dolore voluptate! Voluptas nihil quas consequuntur harum aut facilis. Veniam suscipit ad aspernatur cupiditate, dolorem maxime illum error placeat vero cum rem qui! Sapiente quidem, quisquam recusandae ipsum adipisci odio consequuntur numquam, ullam dolor voluptatum assumenda officia possimus quod odit optio dolorem earum nobis eum modi, quam nostrum laboriosam fugiat? Inventore, consectetur culpa.
+    </div>
+    
+    <header>
+        <nav class="container">
+            <ul class="nav-list">
+                <a href="/index/" target="_blank">Anasayfa</a>
+                <a href="https://www.youtube.com/?hl=tr&gl=TR" target="_blank">Hakkında</a>
+                <a href="/aa/">İletişim</a>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    
+    <form class="form">
+        <input type="text" name="" id="" placeholder="Kullanıcı Adı"><br>
+        <input type="password" name="" id="" placeholder="Şifre"><br>
+        <input type="button" value="Giriş">
+    </form>
+    <div class="box1-con">
+        <div class="box box1">box1</div>
+    </div>
+    <hr>
+    <main>
+        <div class="conbox">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">
+                <img src="img/car3.webp" alt="">
+            </div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+    </main>
+</body>
+</html>

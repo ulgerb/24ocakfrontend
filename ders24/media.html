@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media query</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        html,body{padding: 0;}
+        .container{
+            display: flex;
+            
+            justify-content: center;
+        }
+        .box{
+            margin: 30px;
+            width: 280px;
+            height: 280px;
+            background: red;
+            border: 4px solid black;
+            font-size: 20px;
+        }
+        
+        @media (max-width: 1400px) {
+            .box{
+                margin: 10px;
+            }
+        }
+        @media (max-width: 1200px) {
+            .container{
+                flex-wrap: wrap;
+            }
+            .box{
+                margin: 5px;
+            }
+        }
+        @media (max-width: 992px) {
+            .container{
+                
+            }
+            .box{
+                width: 300px;
+            }
+        }
+        @media (max-width: 768px) {
+            .box{
+                width: 400px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .box{
+                animation: box 1s;
+            }
+        }
+        @keyframes box {
+            50%{
+                scale: 1.4;
+            }
+        }
+        
+
+        @media (max-width: 1400px) {}
+        @media (max-width: 1200px) {}
+        @media (max-width: 992px) {}
+        @media (max-width: 768px) {}
+        @media (max-width: 576px) {}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi ex facere quod exercitationem vel eaque, vero necessitatibus cumque nam aliquam molestiae ducimus dolore, eveniet, at amet nesciunt quos dolor nulla.</div>
+        <div class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi ex facere quod exercitationem vel eaque, vero necessitatibus cumque nam aliquam molestiae ducimus dolore, eveniet, at amet nesciunt quos dolor nulla.</div>
+        <div class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi ex facere quod exercitationem vel eaque, vero necessitatibus cumque nam aliquam molestiae ducimus dolore, eveniet, at amet nesciunt quos dolor nulla.</div>
+        <div class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi ex facere quod exercitationem vel eaque, vero necessitatibus cumque nam aliquam molestiae ducimus dolore, eveniet, at amet nesciunt quos dolor nulla.</div>
+        <div class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi ex facere quod exercitationem vel eaque, vero necessitatibus cumque nam aliquam molestiae ducimus dolore, eveniet, at amet nesciunt quos dolor nulla.</div>
+    </div>
+</body>
+</html>

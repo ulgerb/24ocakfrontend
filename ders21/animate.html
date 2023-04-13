@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+
+        .box-con2{
+            margin-bottom: 20px;
+            width: 100%;
+            height: 300px;
+            border: 4px solid black;
+            overflow: hidden;
+        }
+        .bx1{
+            width: 400%;
+            height: 100%;
+            background: linear-gradient(90deg, red,blue,green,yellow,purple,orange,red,blue,green,yellow,purple,orange);
+            animation: bx1 4s infinite linear ;
+        }
+         @keyframes bx1 {
+            
+            100%{
+                transform: translate(-53%);
+            }
+        }
+
+
+        .bx2{
+            width: 100%;
+            background: blue;
+            animation: bx2 4s infinite linear;
+            transition: all 2s;
+        }
+        .bx3{
+            width: 100%;
+            background: green;
+            animation: bx3 4s infinite linear;
+            transition: all 2s  ;
+        }
+
+       
+
+
+        @keyframes bx2 {
+            25%{
+                background: green;
+            }
+            50%{
+                background: red;
+            }
+        }
+        @keyframes bx3 {
+            25%{
+                background: red;
+            }
+            50%{
+                background: blue;
+            }
+        }
+        
+        .box{
+            width: 100%;
+            height: 300px;
+            border: 4px solid black;
+            background: linear-gradient(20deg, rgba(164,39,39,1) 10%, rgb(255, 224, 47) 50%,rgb(72, 232, 109) );
+            animation: box 5s ease;
+        }
+        @keyframes box {
+            50%{
+                background: linear-gradient(20deg, rgba(164,39,39,1) 30%, rgb(255, 224, 47) 60%,rgb(72, 232, 109) );
+            }
+            100%{
+                background: linear-gradient(20deg, rgba(164,39,39,1) 40%, rgb(255, 224, 47) 80%,rgb(72, 232, 109) );
+                
+            }
+        }
+        .bx{
+            margin: 5px;
+            width: 120px;
+            height: 120px;
+            border: 4px solid black;
+            color: white;
+        }
+        .box1{
+            background: linear-gradient(20deg, rgb(39, 164, 49) 10%, rgb(61, 47, 255)50%,rgb(205, 232, 72) );
+            animation: kutu1 4s forwards linear; /* animasyon adı ve süresi */
+            transition: all 2s;
+        }
+        /* @keyframes animasyon adı{} */
+        @keyframes kutu1 {
+            25%{
+                transform: translate(300px,0px);
+                background: linear-gradient(20deg, rgb(205, 232, 72) 10%, rgb(39, 164, 49)50%,rgb(61, 47, 255)  );
+            }
+            50%{
+                transform: translate(500px, -200px);
+                background: linear-gradient(20deg, rgb(61, 47, 255) 10%, rgb(205, 232, 72)50%,rgb(39, 164, 49) );
+            }
+            75%{
+                transform: translate(700px, 0px);
+            }
+            100%{
+                transform: translate(700px, 0px);
+            }
+        }
+        .box2{
+            background: green;
+            animation: kutu2 4s;
+        }
+        @keyframes kutu2 {
+            25%{
+                transform: translate(100px, -100px) rotate(.5turn);
+            }
+            50%{
+                transform: rotate(0.99turn) translate(200px, 0px);
+            }
+            75%{
+                transform: translate(500px, 0px) rotate(1600deg);
+            }
+            100%{
+                transform: translate(800px, 0px);
+            }
+        }
+        .box3{
+            background: red;
+            animation: kutu3 4s;
+        }
+        @keyframes kutu3 {
+            25%{
+                transform: translate(200px, 0px) scale(1.2);
+            }
+            50%{
+                transform: rotate(180deg);
+            }
+            75%{
+                transform: translate(200px, 0px);
+            }
+            100%{
+                transform: translate(200px, 0px);
+            }
+        }
+        .box4{
+            background: blue;
+            animation: kutu4 6s infinite reverse;
+        }
+        @keyframes kutu4 {
+            25%{
+                transform: skewX(45deg) translate(200px, 0px);
+                width: 300px;
+            }
+            50%{
+                background: purple;
+            }
+            75%{
+                background: lightseagreen;
+                box-shadow: 0px 0px 8px 10px rgba(0, 0, 0, 0.725);
+            }
+            90%{
+                transform: rotate(4turn);
+            }
+            100%{
+                background: #000;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box-con2">
+        <div class="bx1"></div>
+    </div>
+    
+    
+    <div class="box"></div>
+
+    <div class="box-con">
+        <div class="box1 bx">KUTU 1</div>
+        <div class="box2 bx">KUTU 2</div>
+        <div class="box3 bx">KUTU 3</div>
+        <div class="box4 bx">KUTU 4</div>
+    </div>
+</body>
+</html>
