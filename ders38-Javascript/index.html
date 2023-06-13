@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JS</title>
+   <style>
+      body,html{
+         padding: 0;
+         margin: 0;
+      }
+      .bb{
+         color: coral;
+      }
+      .divtoggle{
+         height: 200px !important;
+      }
+      .leftmove{
+         margin-left: 400px;
+      }
+      .navbar{
+         width: 100%;
+         height: 80px;
+         background: crimson;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+      .menudiv{
+         width: 200px;
+         height: 100vh;
+         position: fixed;
+         background: rgb(174, 17, 48);
+         top: 0;
+         right: -200px;
+         z-index: 1000;
+         transition: 1s;
+      }
+      .menuclose{
+         right: 0;
+      }
+      .show{
+         display: block !important;
+      }
+   </style>
+</head>
+
+<section></section>
+
+<body>
+   
+   <header>
+      <div class="navbar">
+         <div style="color: white; font-size: 20px; display: flex; justify-content: space-around; min-width: 400px;">
+            <div>Anasayfa</div>
+            <div>Hakkında</div>
+            <div>İletişim</div>
+            <div class="dropdownmy">
+               <div>dropdown</div>
+               <ul class="dropdownmenu" style="background: white; color: black; list-style: none; padding: 20px; position: absolute; margin: 30px 0 0 -10px; border: 2px solid #222; border-radius: 10px; display: none;">
+                  <li>1.madde</li>
+                  <li>2.madde</li>
+                  <li>3.madde</li>
+               </ul>
+            </div>
+         </div>
+         <button id="menu" style="margin-right: 20px; height: 40px;">Menu</button>
+      </div>
+      <div class="menudiv"><ul>
+         <div style="display: flex; justify-content: end; margin-right: 10px;">
+            <button id="menuclose">X</button>
+         </div>
+         <li>Anasayfa</li>
+         <li>Hakkında</li>
+         <li>İletişim</li>
+         <li>Yorumlar</li>
+      </ul></div>
+   </header>
+   <h1>JAVASCRIPT</h1>
+   <div class="dropdownmy">
+      <div>dropdown</div>
+      <ul class="dropdownmenu"
+         style="background: white; color: black; list-style: none; padding: 20px; position: absolute; margin: 30px 0 0 -10px; border: 2px solid #222; border-radius: 10px; display: none;">
+         <li>1.madde</li>
+         <li>2.madde</li>
+         <li>3.madde</li>
+      </ul>
+   </div>
+   <br>
+   <button class="bb" type="button" id="mybut">My button</button>
+   <div id="mydiv">
+      <div>box</div>
+      <div>box</div>
+      <div>box</div>
+      <div>box</div>
+      <div>box</div>
+      <div>box</div>
+   </div>
+   <!-- <div id="div2" onclick="Move()"></div>
+   
+   <div id="div1" class="div1" onclick="Animate()">toggle menu</div> -->
+
+   
+   
+   <!-- <div id="box2"></div>
+   
+   <div class="boxx1"></div>
+<br>
+   <div class="box1"></div>
+   <div id="div1"></div>
+   <div id="divid"></div>
+   
+   <div class="user">
+      <h5>user1</h5>
+      <div>111</div>
+   </div>
+   <hr>
+   <div class="user">
+      <h5>user2</h5>
+      <div>222</div>
+   </div>
+   <hr>
+   <div class="user">
+      <h5>user3</h5>
+      <div>333</div>
+   </div>
+   
+   <br><br>
+   <div class="card">
+      <h5>CARD1</h5>
+      <div>fiyat: ₺<span class="price">1000</span></div>
+   </div>
+   <hr>
+   <div class="card">
+      <h5>CARD2</h5>
+      <div>fiyat: ₺<span class="price">2000</span></div>
+   </div>
+   <hr>
+   <div class="card">
+      <h5>CARD3</h5>
+      <div>fiyat: ₺<span class="price">3000</span></div>
+   </div>
+   <hr> -->
+   
+   
+   <!-- <div class="div1"></div>
+   <div class="div2"></div>
+   
+   <br><br><br>
+   <div class="card">card1</div>
+   <div class="card">card2</div>
+   <div class="card">card3</div>
+   <div class="card">card4</div>
+   <div class="card">card5</div>
+   
+   
+   <div>Merhaba Javascript DOM</div>
+   <p class="text" id="text">İçerik Yazısı</p>
+   <p id="p1">Günün konusunu siz seçin</p> -->
+   
+   
+   <script src="js/script.js"></script>
+</body>
+
+</html>

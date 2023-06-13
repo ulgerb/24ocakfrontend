@@ -103,13 +103,13 @@
    </style>
    <!-- CARD CSS END -->
    <style>
-      .dropdown {
-         position:static !important;
+      header>nav{
+         min-height: 10vh;
       }
       .dropdown-w100{
          padding: 0px 3% 0px 13%;
          box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
-         margin-top: 16px !important;
+         margin-top: 0px !important;
          width: 100% !important;
       }
       .dropdown-w100 h5{
@@ -136,121 +136,212 @@
          position: absolute;
          right: 20px;
       }
-
+      
+      .menu-list a{
+         color: white;
+         text-decoration: none;
+      }
+      .menu-list li{
+         padding-left: 30px;
+         background-color: #00142b;
+         color: white;
+      }
+      .accordion-button:focus{
+         box-shadow: none !important;
+      }
+      
    </style>
 </head>
 
 <body>
 
+   
+   
    <!-- HEADER START -->
-   <header class="p-3 text-bg-warning" style="background-image: linear-gradient(to right, #001e42 0%, #a71d8e);">
-      <div class="container">
-         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-               <img width="180px" src="img/bein.png" alt="">
-            </a>
-   
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ms-4">
-               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle text-white fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                     Paketler
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark p-0 mt-2" style="background: #001e42 ;">
-                     <li><a class="dropdown-item text-white py-3" href="#">Spor</a></li>
-                     <li><a class="dropdown-item text-white py-3" href="#">Eğlence</a></li>
-                  </ul>
-               </li>
-               <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle bg-transparent border-0 fs-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                     İçerikleri Keşfet
-                  </button>
-                  <ul class="dropdown-menu dropdown-w100 rounded-0 border-0" style="background:#a71d8e;">
-                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-2 my-2">
-                    
-                        <div class="col mb-3">
-                          <h5>FİLM</h5>
-                          <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">About</a></li>
-                          </ul>
-                        </div>
-                    
-                        <div class="col mb-3">
-                          <h5>Dizi</h5>
-                          <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">About</a></li>
-                          </ul>
-                        </div>
-                    
-                        <div class="col mb-3">
-                          <h5>Spor</h5>
-                          <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">About</a></li>
-                          </ul>
-                        </div>
-                        <div class="col mb-3">
-                          <h5>Çocuk</h5>
-                          <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">About</a></li>
-                          </ul>
-                        </div>
-                        <div class="col mb-3">
-                          <h5>Canlı TV</h5>
-                          <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Features</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Pricing</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">About</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                  </ul>
-                </div>
-               
-            </ul>
-            
-            
-   
-            <div class="text-end pe-3">
-               <!-- Button trigger modal -->
-               <button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+   <header class="px-3 text-bg-warning" style="background-image: linear-gradient(to right, #001e42 0%, #a71d8e);">
+      <nav class="navbar navbar-expand-lg">
+         <div class="container-xl d-flex">
+            <div class="d-flex">
+               <button class="navbar-toggler p-0 me-3 text-white" style="width: 24px;" type="button" 
+               data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"
+                   aria-expanded="false" aria-label="Toggle navigation">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor">
-                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-               </svg>
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
                </button>
-               
-               <!-- Modal -->
-               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-search">
-                     <div class="modal-content p-0 bg-transparent">
-                        <div class="modal-header p-0 border-0">
-                           <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 w-100" role="search">
-                              <input type="search" class="form-control form-control-dark w-100" placeholder="Search..."
-                                 aria-label="Search" style="background:rgba(0, 30, 66, 1);">
-                           </form>
-                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+               <a href="/" class="d-flex  mb-lg-0 text-white text-decoration-none">
+                  <img width="180px" src="img/bein.png" alt="">
+               </a>
+            </div>
+
+            <div class="tab-content d-flex flex-fill" id="nav-tabContent">
+               <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                  <div class="collapse navbar-collapse" id="navbarScroll">
+                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ms-4">
+                        <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle text-white fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Paketler
+                           </a>
+                           <ul class="dropdown-menu dropdown-menu-dark p-0 mt-2" style="background: #001e42 ;">
+                              <li><a class="dropdown-item text-white py-3" href="#">Spor</a></li>
+                              <li><a class="dropdown-item text-white py-3" href="#">Eğlence</a></li>
+                           </ul>
+                        </li>
+                        <div class="dropdown" style="position: static !important;">
+                           <a class="nav-link dropdown-toggle text-white fs-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              İçerikleri Keşfet
+                           </a>
+                           <ul class="dropdown-menu dropdown-w100 rounded-0 border-0" style="background:#a71d8e;">
+                              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-2 my-2">
+                              
+                                 <div class="col mb-3">
+                                    <h5>FİLM</h5>
+                                    <ul class="nav flex-column">
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Home</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Features</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Pricing</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">FAQs</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">About</a></li>
+                                    </ul>
+                                 </div>
+                              
+                                 <div class="col mb-3">
+                                    <h5>Dizi</h5>
+                                    <ul class="nav flex-column">
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Home</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Features</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Pricing</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">FAQs</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">About</a></li>
+                                    </ul>
+                                 </div>
+                              
+                                 <div class="col mb-3">
+                                    <h5>Spor</h5>
+                                    <ul class="nav flex-column">
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Home</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Features</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Pricing</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">FAQs</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">About</a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="col mb-3">
+                                    <h5>Çocuk</h5>
+                                    <ul class="nav flex-column">
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Home</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Features</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Pricing</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">FAQs</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">About</a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="col mb-3">
+                                    <h5>Canlı TV</h5>
+                                    <ul class="nav flex-column">
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Home</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Features</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">Pricing</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">FAQs</a></li>
+                                       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 t-white">About</a></li>
+                                    </ul>
+                                 </div>
+                                 </div>
+                           </ul>
                         </div>
-                     </div>
+                     </ul>
                   </div>
                </div>
-               <button type="button" class="btn btn-outline-light me-2 px-4 pb-2 mx-3 fw-bold">Satın Al</button>
-               <button type="button" class="btn text-white px-4 pb-2 mx-3 fw-bold" style="background-color: #001e42;">Giriş Yap</button>
+               <div class="tab-pane fade flex-fill " id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                  <div class="d-flex align-items-center border-0 px-4">
+                     <form class="flex-fill" role="search">
+                        <input type="search" class="form-control form-control-dark flex-fill" placeholder="Search..." aria-label="Search"
+                           style="background:rgba(0, 30, 66, 1);">
+                     </form>
+                     
+                     <button class="nav-link active text-white" style="margin-left: -20px;" onclick="buttonClose()" id="nav-home-taba" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+                        role="tab" aria-controls="nav-home" aria-selected="true">X</button>
+                  </div>
+               </div>
+               
+            </div>
+            
+            
+            
+
+            <div class="text-end pe-md-3 d-flex ">
+               <nav>
+                  <div class="nav" id="nav-tab" role="tablist">
+                     <button class="nav-link active d-none" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+                        role="tab" aria-controls="nav-home" aria-selected="true">X</button>
+               
+                     <div class="text-white mt-1" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
+                        role="tab" aria-controls="nav-profile" aria-selected="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                     </div>
+                  </div>
+               </nav>
+               <div class="d-flex">
+                  <button type="button" class="btn btn-outline-light d-md-inline d-none ms-2 fw-bold">Satın Al</button>
+                  <button type="button" class="btn text-white d-md-inline d-none ms-2 fw-bold" style="background-color: #001e42;">Giriş Yap</button>
+               </div>
+            </div>
+
+            
+         </div>
+      </nav>
+      
+      <!-- RESPONSIVE MENU -->
+      <div class="offcanvas offcanvas-start text-white" style="background-color: #001e42;" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+         <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div>
+         <div class="offcanvas-body px-0">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+               <div class="accordion-item text-white" style="background-color: #00142b;">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                     <button class="accordion-button collapsed text-white" style="background-color: #001e42;" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Paketler
+                     </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                     data-bs-parent="#accordionFlushExample">
+
+                     <ul class="list-group list-group-flush menu-list">
+                        <li class="list-group-item"><a href="#">Spor</a></li>
+                        <li class="list-group-item"><a href="#">Eğlence</a></li>
+                     </ul>
+                     
+                  </div>
+               </div>
+               <div class="accordion-item text-white" style="background-color: #00142b;">
+                  <h2 class="accordion-header" id="flush-heading2">
+                     <button class="accordion-button collapsed text-white" style="background-color: #001e42;" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapseOne">
+                        İçerikleri Keşfet
+                     </button>
+                  </h2>
+                  <div id="flush-collapse2" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                     data-bs-parent="#accordionFlushExample">
+
+                     <ul class="list-group list-group-flush menu-list">
+                        <li class="list-group-item"><a href="#">Spor</a></li>
+                        <li class="list-group-item"><a href="#">Eğlence</a></li>
+                     </ul>
+                     
+                  </div>
+               </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+               <button type="button" class="btn text-white px-5 pb-2 mx-3 mt-4 fw-medium" style="background-color: #9064cc;">Giriş
+                  Yap</button>
             </div>
          </div>
       </div>
@@ -258,10 +349,10 @@
    <!-- HEADER END -->
 
    <!-- MAIN START -->
-   <main>
+   <main class="w-100">
       <!-- CAROUSEL START -->
-      <div class="row">
-         <div class="col-12">
+      <div class="row w-100 mx-0">
+         <div class="col-12 px-0">
             <div id="carouselExampleIndicators" class="carousel slide bg-black" data-bs-ride="true">
                <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -312,17 +403,17 @@
       <!-- CAROUSEL END -->
       
       <!-- CARDS START -->
-      <div class="row justify-content-center bg-black">
-         <div class="row col-8 p-0 pt-4 home-demo">
+      <div class="row justify-content-center bg-black w-100 mx-0">
+         <!-- <div class="row col-8 gy-4 p-0 pt-4 home-demo">
             <div class="d-flex pt-5 pb-4 justify-content-between">
                <h5 class="text-white">Öne Çıkanlar </h5>
                <svg class="card-menu" width="16px" fill="#fff" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  viewBox="0 0 448 512">
                   <path
                      d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
                </svg>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-sm-6">
                <a href="#" class="text-decoration-none">
                   <div class="card text-center bg-dark">
                      <div style="background: #0a0a0a;" class="card-body py-4 d-flex align-items-center justify-content-evenly">
@@ -346,7 +437,7 @@
                   </div>
                </a>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-sm-6">
                <a href="#" class="text-decoration-none">
                   <div class="card text-center bg-dark">
                      <div style="background: #0a0a0a;" class="card-body py-4 d-flex align-items-center justify-content-evenly">
@@ -370,7 +461,7 @@
                   </div>
                </a>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-sm-6">
                <a href="#" class="text-decoration-none">
                   <div class="card text-center bg-dark">
                      <div style="background: #0a0a0a;" class="card-body py-4 d-flex align-items-center justify-content-evenly">
@@ -394,7 +485,113 @@
                   </div>
                </a>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-sm-6">
+               <a href="#" class="text-decoration-none">
+                  <div class="card text-center bg-dark">
+                     <div style="background: #0a0a0a;" class="card-body py-4 d-flex align-items-center justify-content-evenly">
+                        <div>
+                           <img width="60%" src="img/f1.png" alt="">
+                           <p class="p-0 m-0 fw-bold text-white" style="font-size: 14px;">ASTON VİLLA</p>
+                        </div>
+                        <div>
+                           <img width="42px" src="img/play.svg" alt="">
+                           <p class="p-0 m-0 fw-bold" style="font-size: 14px; color: #666468;">21.45</p>
+                        </div>
+                        <div>
+                           <img width="60%" src="img/f2.png" alt="">
+                           <p class="p-0 m-0 fw-bold text-white" style="font-size: 14px;">ASTON VİLLA</p>
+                        </div>
+                     </div>
+                     <div class="card-footer p-0 py-1 m-0 text-muted" style="font-size: 14px;">
+                        <p class="m-0 p-0" style="color: #666468;">İngiltere Premier Lig</p>
+                        <p class="m-0 p-0" style="color: #666468;">Maç Başlıyor</p>
+                     </div>
+                  </div>
+               </a>
+            </div>
+         </div> -->
+         <div class="row col-8 p-0 pt-4 home-demo">
+            <div class="d-flex pt-5 pb-4 justify-content-between">
+               <h5 class="text-white">Öne Çıkanlar </h5>
+               <svg class="card-menu" width="16px" fill="#fff" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512">
+                  <path
+                     d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+               </svg>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+               <a href="#" class="text-decoration-none">
+                  <div class="card text-center bg-dark">
+                     <div style="background: #0a0a0a;" class="card-body py-4 d-flex align-items-center justify-content-evenly">
+                        <div>
+                           <img width="60%" src="img/f1.png" alt="">
+                           <p class="p-0 m-0 fw-bold text-white" style="font-size: 14px;">ASTON VİLLA</p>
+                        </div>
+                        <div>
+                           <img width="42px" src="img/play.svg" alt="">
+                           <p class="p-0 m-0 fw-bold" style="font-size: 14px; color: #666468;">21.45</p>
+                        </div>
+                        <div>
+                           <img width="60%" src="img/f2.png" alt="">
+                           <p class="p-0 m-0 fw-bold text-white" style="font-size: 14px;">ASTON VİLLA</p>
+                        </div>
+                     </div>
+                     <div class="card-footer p-0 py-1 m-0 text-muted" style="font-size: 14px;">
+                        <p class="m-0 p-0" style="color: #666468;">İngiltere Premier Lig</p>
+                        <p class="m-0 p-0" style="color: #666468;">Maç Başlıyor</p>
+                     </div>
+                  </div>
+               </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6 d-none d-sm-block">
+               <a href="#" class="text-decoration-none">
+                  <div class="card text-center bg-dark">
+                     <div style="background: #0a0a0a;" class="card-body py-4 d-flex align-items-center justify-content-evenly">
+                        <div>
+                           <img width="60%" src="img/f1.png" alt="">
+                           <p class="p-0 m-0 fw-bold text-white" style="font-size: 14px;">ASTON VİLLA</p>
+                        </div>
+                        <div>
+                           <img width="42px" src="img/play.svg" alt="">
+                           <p class="p-0 m-0 fw-bold" style="font-size: 14px; color: #666468;">21.45</p>
+                        </div>
+                        <div>
+                           <img width="60%" src="img/f2.png" alt="">
+                           <p class="p-0 m-0 fw-bold text-white" style="font-size: 14px;">ASTON VİLLA</p>
+                        </div>
+                     </div>
+                     <div class="card-footer p-0 py-1 m-0 text-muted" style="font-size: 14px;">
+                        <p class="m-0 p-0" style="color: #666468;">İngiltere Premier Lig</p>
+                        <p class="m-0 p-0" style="color: #666468;">Maç Başlıyor</p>
+                     </div>
+                  </div>
+               </a>
+            </div>
+            <div class="col-lg-3 col-4 d-none d-md-block">
+               <a href="#" class="text-decoration-none">
+                  <div class="card text-center bg-dark">
+                     <div style="background: #0a0a0a;" class="card-body py-4 d-flex align-items-center justify-content-evenly">
+                        <div>
+                           <img width="60%" src="img/f1.png" alt="">
+                           <p class="p-0 m-0 fw-bold text-white" style="font-size: 14px;">ASTON VİLLA</p>
+                        </div>
+                        <div>
+                           <img width="42px" src="img/play.svg" alt="">
+                           <p class="p-0 m-0 fw-bold" style="font-size: 14px; color: #666468;">21.45</p>
+                        </div>
+                        <div>
+                           <img width="60%" src="img/f2.png" alt="">
+                           <p class="p-0 m-0 fw-bold text-white" style="font-size: 14px;">ASTON VİLLA</p>
+                        </div>
+                     </div>
+                     <div class="card-footer p-0 py-1 m-0 text-muted" style="font-size: 14px;">
+                        <p class="m-0 p-0" style="color: #666468;">İngiltere Premier Lig</p>
+                        <p class="m-0 p-0" style="color: #666468;">Maç Başlıyor</p>
+                     </div>
+                  </div>
+               </a>
+            </div>
+            <div class="col-3 d-none d-lg-block">
                <a href="#" class="text-decoration-none">
                   <div class="card text-center bg-dark">
                      <div style="background: #0a0a0a;" class="card-body py-4 d-flex align-items-center justify-content-evenly">
@@ -424,7 +621,7 @@
                <div class="d-flex pt-3 pb-4 justify-content-between">
                   <h5 class="text-white">Öne Çıkanlar </h5>
                   <svg class="card-menu" width="16px" fill="#fff" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                     viewBox="0 0 448 512">
                      <path
                         d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
                   </svg>
@@ -623,7 +820,7 @@
                <div class="d-flex pt-3 pb-4 justify-content-between">
                   <h5 class="text-white">TOD Originals</h5>
                   <svg class="card-menu" width="16px" fill="#fff" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                     viewBox="0 0 448 512">
                      <path
                         d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
                   </svg>
@@ -822,7 +1019,7 @@
                <div class="d-flex pt-3 pb-4 justify-content-between">
                   <h5 class="text-white">Kahkaha Dolu Bir Nisan</h5>
                   <svg class="card-menu" width="16px" fill="#fff" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                     viewBox="0 0 448 512">
                      <path
                         d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
                   </svg>
@@ -1022,7 +1219,90 @@
    </main>
    <!-- MAIN END -->
 
+   <!-- FOOTER START -->
+   <div class="container">
+      <footer class="p-5">
+         <div class="row">
    
+            <div class="col-sm col-12 mb-3">
+               <h5>Yardım</h5>
+               <ul class="nav flex-column fw-medium">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sıkça Sorulan Sorular</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kupon Kodu</a></li>
+               </ul>
+            </div>
+   
+            <div class="col-sm col-12 mb-3">
+               <h5>Legal</h5>
+               <ul class="nav flex-column fw-medium">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Telif Hakkı Uyarısı</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Müşteri Aydınlatma Metni</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Çerez Aydınlatma Metni</a></li>
+               </ul>
+            </div>
+   
+            <div class="col-lg-3 mb-3 d-flex justify-content-lg-end">
+               <form>
+                  <div class="d-flex justify-content-center mb-4">
+                     <button class="btn btn-dark d-flex align-items-center px-4" type="button">
+                        <svg class="me-2" width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                           <path fill-rule="evenodd"
+                              d="M11.588.007C17.593-.218 22.5 4.767 22.5 10.916l-.002.038V23.55l-.003.055c-.033.288-.325.474-.592.36l-6.122-2.61-.077-.03a.91.91 0 00-.563.007c-.998.328-2.058.513-3.162.513-5.973 0-10.79-5.227-10.463-11.536C1.803 4.75 6.238.208 11.588.007zm2.206 12.785h-3.615l-.063.002c-.558.047-.893.709-.576 1.207.525.826 1.423 1.371 2.446 1.371 1.025 0 1.921-.545 2.446-1.371.329-.517-.042-1.21-.638-1.21zm4.316-4.024c-1.258 0-2.277 1.06-2.277 2.368 0 1.308 1.02 2.368 2.277 2.368 1.257 0 2.276-1.06 2.276-2.368 0-1.308-1.019-2.368-2.276-2.368zm-12.247 0c-1.257 0-2.276 1.06-2.276 2.368 0 1.308 1.019 2.368 2.276 2.368 1.258 0 2.276-1.06 2.276-2.368 0-1.308-1.018-2.368-2.276-2.368z">
+                           </path>
+                        </svg>
+                        Canlı Destek</button>
+                  </div>
+                  <div class="d-flex justify-content-between" style="width: 180px;">
+                     <a href="#">
+                        <div class="bg-dark p-2 rounded-circle">
+                           <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512" width="32" height="32">
+                              <path fill="#fff"
+                                 d="M437 152a72 72 0 01-40 12a72 72 0 0032-40a72 72 0 01-45 17a72 72 0 00-122 65a200 200 0 01-145-74a72 72 0 0022 94a72 72 0 01-32-7a72 72 0 0056 69a72 72 0 01-32 1a72 72 0 0067 50a200 200 0 01-105 29a200 200 0 00309-179a200 200 0 0035-37">
+                              </path>
+                           </svg>
+                        </div>
+                     </a>
+                     <a href="#">
+                        <div class="bg-dark p-2 rounded-circle">
+                           <svg xmlns="http://www.w3.org/2000/svg" aria-label="Facebook" role="img" viewBox="0 0 512 512" width="32" height="32">
+                              <path
+                                 d="M355.6 330l11.4-74h-71v-48c0-20.2 9.9-40 41.7-40H370v-63s-29.3-5-57.3-5c-58.5 0-96.7 35.4-96.7 99.6V256h-65v74h65v182h80V330h59.6z"
+                                 fill="#fff"></path>
+                           </svg>
+                        </div>
+                     </a>
+                     <a href="#">
+                        <div class="bg-dark p-2 rounded-circle">
+                           <svg aria-hidden="true" aria-label="Instagram" role="img" viewBox="0 0 448 512" width="32" height="32">
+                              <path fill="#fff"
+                                 d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                                 class=""></path>
+                           </svg>
+                        </div>
+                     </a>
+                  </div>
+               </form>
+            </div>
+         </div>
+   
+         <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-4 border-top">
+            <p>Digiturk bir beIN MEDIA GROUP kuruluşudur. © 2023 Her hakkı saklıdır.</p>
+            <ul class="list-unstyled d-flex">
+               <li class="ms-3"><a class="link-dark" href="#">
+                  <img src="https://media.beinconnect.com.tr/assets/bc/images/_bc/apple-store-icon.png" alt="">
+               </a></li>
+               <li class="ms-3"><a class="link-dark" href="#">
+                  <img src="https://media.beinconnect.com.tr/assets/bc/images/_bc/google-play-icon.png" alt="">
+               </a></li>
+              
+            </ul>
+         </div>
+         <div class="d-flex justify-content-center">
+            <img width="96" height="96" src="	https://media.beinconnect.com.tr/assets/bc/images/etbis-qr.png" alt="">
+         </div>
+      </footer>
+   </div>
+   <!-- FOOTER END -->
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
@@ -1049,6 +1329,21 @@
                }
             }
          })
+
+      </script>
+
+      <script>
+         const navhome = document.getElementById("nav-home")
+         const navprofile = document.getElementById("nav-profile")
+         const buttonhome = document.getElementById("nav-home-tab")
+         const buttonprofile = document.getElementById("nav-profile-tab")
+
+         const buttonClose = () => {
+            navhome.className += " show active";
+            navprofile.classList.remove("show", "active");
+            buttonprofile.classList.remove("active");
+            buttonhome.className += " active"
+         }
 
       </script>
 </body>
