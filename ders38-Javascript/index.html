@@ -5,6 +5,12 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Font Awesome -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+   <!-- MDB -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
    <title>JS</title>
    <style>
       body,html{
@@ -44,6 +50,99 @@
       .show{
          display: block !important;
       }
+      .hide{
+         display: none;
+      }
+
+      .hata-con{
+         position: fixed;
+         right: 30px;
+         top: 110px;
+         z-index: 5000;
+      }
+      .hata{
+         position: relative;
+         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+         border-radius: 10px;
+         overflow: hidden;
+         animation: hata 5s both;
+         background: whitesmoke;
+      }
+      .hata-text{
+         padding: 10px;
+         padding-bottom: 5px;
+         width: 100%;
+         height: 100%;
+      }
+      .hata-time{
+         width: 100%;
+         height: 5px;
+         background: goldenrod;
+         animation: hata-time 5s linear both;
+      }
+      @keyframes hata {
+         88%{
+            opacity: 1;
+         }
+         100%{
+            opacity: 0;
+         }
+      }
+      @keyframes hata-time {
+         100%{
+            width: 0;
+         }
+      }
+      #div-con{
+         display: flex;
+      }
+      .div1{
+         margin: 5px;
+         width: 100px;
+         height: 100px;
+         background: #bab846;
+         border: 2px solid black;
+      }
+
+      /* SLIDER START */
+      #myslidercon{
+         width: 100%;
+         display: flex;
+         justify-content: center;
+      }
+      #myslidercon .slider-body-con{
+         overflow: hidden;
+      }
+      .slider-body{
+         display: flex;
+         transition: 1s;
+         transform: translateX(0px);
+      }
+      .myslider{
+         margin: 5px;
+         min-width: 150px;
+         height: 150px;
+         border: 2px solid black;
+         background: #ee8888;
+      }
+      /* button arrow */
+      .fa-angle-left{
+         cursor: pointer;
+         padding: 10px;
+         border-radius: 50%;
+         box-shadow: 2px 2px 6px #22222230;
+      }
+      .fa-angle-right{
+         cursor: pointer;
+         padding: 10px;
+         border-radius: 50%;
+         box-shadow: 2px 2px 6px #22222230;
+      }
+      .fa-angle-left:hover,.fa-angle-right:hover {
+         box-shadow: 4px 4px 8px #22222260;
+      }
+
+      /* SLIDER END */
    </style>
 </head>
 
@@ -79,6 +178,59 @@
       </ul></div>
    </header>
    <h1>JAVASCRIPT</h1>
+   <div class="hata-con" id="hata-con"></div>
+
+   <div id="myslidercon">
+      
+      <div class="btnleft d-flex align-items-center" onclick="btnLeft()"><i class="fas fa-angle-left"></i></div>
+      <div class="slider-body-con">
+         <div class="slider-body">
+            <div class="myslider"><div class="card">0</div></div>
+            <div class="myslider"><div class="card">1</div></div>
+            <div class="myslider"><div class="card">2</div></div>
+            <div class="myslider"><div class="card">3</div></div>
+            <div class="myslider"><div class="card">4</div></div>
+            <div class="myslider"><div class="card">5</div></div>
+            <div class="myslider"><div class="card">6</div></div>
+         </div>
+      </div>
+      <div class="btnright d-flex align-items-center" onclick="btnRight()"><i class="fas fa-angle-right"></i></div>
+   </div>
+   
+   <br><br><br><br><br><br>
+   <div id="div-con">
+      <div class="div1">0<div id="dv1"></div></div>
+      <div class="div1">1<div id="dv2"></div></div>
+      <div class="div1">2<div id="dv3"></div></div>
+   </div>
+   <div class="row m-0 justify-content-center align-items-center" style="height: 50vh;">
+      <div class="col-6 m-0">
+         <h3>Giriş Yap</h3>
+         <form onsubmit="mySubmit(event)" class="gap-2 d-flex flex-column" action="">
+            <input class="form-control m-0" type="text" name="username" onchange="myChange(this)" oninput="myInput(this)" id="" placeholder="Kullanıcı Adı" >
+            <input class="form-control" type="password" name="password" id="" placeholder="Şifre" >
+            <button class="btn btn-primary" type="submit">Giriş</button>
+            <div id="messages" style="height: 16px;"></div>
+         </form>
+      </div>
+   </div>
+   
+   <form id="formuser" style="padding: 20px; border: 2px solid #22222230;" action="">
+      <h3>Form</h3>
+      <input type="text" name="fullname" id="fullname" placeholder="Ad Soyad"><br>
+      <input type="text" name="username" id="username" placeholder="Kullanıcı Adı"><br>
+      <input type="text" name="password" id="password" placeholder="Şifre"><br>
+      <div>
+         <input type="checkbox" name="" disabled id="sozles">
+         <label for="sozles"><a href="#" onclick="kvkK()">kvkk</a> Sözleşmeyi okudum onaylıyorum</label>
+      </div>
+      <div class="hide">
+         <input type="checkbox" name="" id="sozles2" onchange="select2Change(this)">
+         <label for="sozles2"><a href="#">Form kurallarını</a> onaylıyorum</label>
+      </div>
+      <button type="button" onclick="submitButton()" disabled id="login">Giriş</button>
+   </form>
+   
    <div class="dropdownmy">
       <div>dropdown</div>
       <ul class="dropdownmenu"
@@ -160,7 +312,8 @@
    <p class="text" id="text">İçerik Yazısı</p>
    <p id="p1">Günün konusunu siz seçin</p> -->
    
-   
+   <!-- MDB -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
    <script src="js/script.js"></script>
 </body>
 

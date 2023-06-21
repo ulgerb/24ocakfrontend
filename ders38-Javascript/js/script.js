@@ -1470,19 +1470,19 @@ lastik = Number(prompt("kaç lastikte problem var?"))
 //     menudiv.classList.toggle("menuclose")
 // }
 
-let menudiv = document.querySelector(".menudiv");
-let menu = document.getElementById("menu")
-let menuclose = document.getElementById("menuclose")
+// let menudiv = document.querySelector(".menudiv");
+// let menu = document.getElementById("menu")
+// let menuclose = document.getElementById("menuclose")
 
-menu.addEventListener("click", ()=>{
-    menudiv.style.right = "0";
-})
+// menu.addEventListener("click", ()=>{
+//     menudiv.style.right = "0";
+// })
 
-menuclose.addEventListener("dblclick", ()=>{
-    menudiv.style.right = "-200px";
-})
+// menuclose.addEventListener("dblclick", ()=>{
+//     menudiv.style.right = "-200px";
+// })
 
-let dropdownmy = document.querySelectorAll(".dropdownmy")
+// let dropdownmy = document.querySelectorAll(".dropdownmy")
 // let dropdownmenu = document.querySelectorAll(".dropdownmenu")
 
 // ====================
@@ -1496,12 +1496,12 @@ let dropdownmy = document.querySelectorAll(".dropdownmy")
 // }
 // ====================
 
-dropdownmy.forEach((e,inn)=>{
-    e.addEventListener("click", () => {
-        e.children[1].classList.toggle("show")
-        // dropdownmenu[inn].classList.toggle("show")
-    })
-})
+// dropdownmy.forEach((e,inn)=>{
+//     e.addEventListener("click", () => {
+//         e.children[1].classList.toggle("show")
+//         // dropdownmenu[inn].classList.toggle("show")
+//     })
+// })
 
 
 
@@ -1545,8 +1545,158 @@ dropdownmy.forEach((e,inn)=>{
 //     }
 // }
 
+// Attribute
+// let sozles = document.getElementById("sozles");
+// let sozles2 = document.getElementById("sozles2");
+// let login = document.getElementById("login");
+
+// const kvkK = ()=>{
+//     sozles.removeAttribute("disabled")
+//     sozles.setAttribute("checked","")
+//     // sozles2'nin sahip olduğu kapsayıcıyı seçip classını kaldırıcaz
+//     console.log(sozles2.parentElement); // ebebein seçici, kapsayıcıyı seçer
+//     sozles2.parentElement.setAttribute("class","")
+// }
+// const select2Change = (e)=>{
+//     console.log(login.hasAttribute("disabled"));
+//     if (login.hasAttribute("disabled")){
+//         login.style.color = "green";
+//         login.innerText = "Giriş Yap";
+//     }else{
+//         login.innerText = "Giriş Yapamazsın";
+//         login.style.color = "red";  
+//     }
+//     if (e.checked){
+//         login.removeAttribute("disabled")
+//     }else{
+//         login.setAttribute("disabled","")
+//     } 
+// }
+
+// let database = {
+//     "username":"berkay1",
+//     "password":"1111",
+// }
+
+// let username = document.getElementById("username")
+// let password = document.getElementById("password")
+
+// const submitButton = (e)=>{
+//     console.log(username.value, password);
+//     if(database.username == username.value && database.password == password.value){
+//         alert("Girişiniz Başarılı..")
+//     }else{
+//         alert("Kullanıcı adı veya şifre yanlış")
+//     }
+// }
+
+let users = [
+    {username:"ahmet1", password:"111", gizli:"kedi"},
+    {username:"ayse2", password:"222", gizli:"köpek"},
+    {username:"hayriye3", password:"333", gizli:"kartal"},
+    {username:"mehmet4", password:"444", gizli:"aslan"},
+    {username:"fatma5", password:"555", gizli:"yılan"},
+]
+
+const myChange = (e)=>{
+    // for(i=0; i<users.length; i++){
+    //     if(users[i].username === e.value){
+    //         console.log("username doğru");
+    //     }
+    // }
+}
+
+const myInput = (e)=>{
+    let login = false;
+    for(i=0; i<users.length; i++){
+        if(users[i].username === e.value){
+            e.classList.add("is-valid")
+            e.classList.remove("is-invalid")
+            login = true;
+        }
+    }
+    if(!login){
+        e.classList.add("is-invalid")
+    }
+}
+
+const mySubmit = (event)=>{
+    event.preventDefault(); // sayfanın yenilenmesini engeller 
+    let messages = document.getElementById("messages");
+    let hata_con = document.getElementById("hata-con");
+    let login = false;
+    for(i=0; i<users.length; i++){
+        if (users[i].username === event.target.username.value && users[i].password === event.target.password.value){
+            login = true;
+            messages.innerText = "Girişiniz Başarılı...";
+            messages.className = "text-success";
+            hata_con.innerHTML = `<div class="hata">
+                <div class="hata-text text-success">Girişiniz Başarılı...</div>
+                <div class="hata-time"></div>
+            </div>`
+            window.location.assign("anasayfa.html")
+        }
+    }
+    if(!login){ // ! tersii al
+        messages.innerText = "Kullanıcı adı veya şifre yanlış!!";
+        messages.className = "text-danger";
+        hata_con.innerHTML = `<div class="hata">
+            <div class="hata-text" style="color:darkred;">Kullanıcı adı veya şifre yanlış!</div>
+            <div class="hata-time"></div>
+        </div>`
+    }
+    
+    // for(i=0; i<event.target.length; i++){
+    //     console.log(event.target[i].value);
+    // }
+    // console.log(event.target.username.value);
+}
+
+
+// let divcon = document.getElementById("div-con");
+// let div1_list = document.querySelectorAll(".div1")
+// let dv2 = document.getElementById("dv2")
+// // console.log(divcon, div1_list, dv2);
+// console.log(divcon.children); // liste olarak gelir
+
+// console.log(divcon.firstElementChild); // ilkini verir
+// console.log(divcon.children[1]); // seçili olanı verir
+// console.log(divcon.lastElementChild); // sonuncuyu verir
+
+// console.log(div1_list[1].previousElementSibling); // öncekini verir
+// console.log(div1_list[1]); // seçili olanı verir
+// console.log(div1_list[1].nextElementSibling); // sonraki elementi verir
+// console.log("-----");
+// console.log(dv2.parentElement.parentElement.style.display = "block");
+
+let slider_body = document.querySelector(".slider-body");
+let transx = 0;
+let sliderwidth = 160;
+let showbox = 5;
+slider_body.parentElement.style.width = (sliderwidth * showbox)+"px";
+let bodyleftcont = slider_body.childElementCount - showbox;
+let bodyleftif = bodyleftcont * sliderwidth;
+
+
+const btnLeft =()=>{
+    if (transx < 0){
+        transx += sliderwidth
+        slider_body.style.transform = "translateX("+  +transx  +"px)"
+    }
+}
+
+const btnRight =()=>{
+    if (transx > -bodyleftif){
+        transx -= sliderwidth
+        slider_body.style.transform = "translateX("+  transx  +"px)"
+    }
+    console.log(transx, bodyleftif);
+}
+
+
+// ==================================================================
 // ÖDEV slider ile image veya cartların butona tıklanarak hareket etmesi
-// preEventDefault(), nextElementSibling, previousElementSibling
+// preEventDefault(), nextElementSibling, previousElementSibling,parentElement, onchange, oninput, window.location, onsubmit,target
 
 // eventlere bakılcak
 
