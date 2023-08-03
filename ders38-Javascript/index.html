@@ -29,7 +29,7 @@
       .navbar{
          width: 100%;
          height: 80px;
-         background: crimson;
+         
          display: flex;
          justify-content: space-between;
          align-items: center;
@@ -143,6 +143,32 @@
       }
 
       /* SLIDER END */
+
+      .obje{
+         width: 150px;
+         height: 150px;
+         background: #000;
+      }
+      .myscrollanimate{
+         transform: translateY(120px);
+         transition: 1s;
+      }
+      .mainheader{
+         position: sticky;
+         top: 0;
+         background: crimson;
+         z-index: 2000;
+         transition: all .8s;
+      }
+      .showup{
+         transition: all .8s;
+         transform: translate(0, 200px);
+         opacity: 0;
+      }
+      .dd1{
+          border: 2px solid black;
+          border-radius: 30%;
+      }
    </style>
 </head>
 
@@ -150,7 +176,7 @@
 
 <body>
    
-   <header>
+   <header class="mainheader">
       <div class="navbar">
          <div style="color: white; font-size: 20px; display: flex; justify-content: space-around; min-width: 400px;">
             <div>Anasayfa</div>
@@ -177,9 +203,59 @@
          <li>Yorumlar</li>
       </ul></div>
    </header>
-   <h1>JAVASCRIPT</h1>
+   <h1>JQUERY</h1>
+   <div class="kutu1"></div>
+   <div class="kutu1"></div>
+   <div id="kutu1"></div>
+   <br><br><br><br>
+   <h1>JAVASCRIPT <span id="title"></span></h1>
+   <br><br><br><br>
+   <div id="mainbox">
+      <div id="box1"></div>
+   </div>
    <div class="hata-con" id="hata-con"></div>
+   <!-- <img id="bird" src="img/bird.svg" style="position: absolute; width: 50px; transition: .5s; left: 20px; top: 120px;" alt=""> -->
+   <br><br><br><br>
+   <div class="d-flex gap-3">
+      <div>
+         <button onclick="upBird()">up</button><br>
+         <button onclick="downBird()">down</button>
+      </div>
+      <button onclick="leftBird()">left</button>
+      <button onclick="rightBird()">right</button>
+   </div>
+   <br><br>
 
+   <div>
+      <input type="text" oninput="inputColor(this)" placeholder="Bir renk giriniz" class="form-control">
+   </div>
+   
+   <div id="form5"></div>
+   <form onsubmit="Form5(event)">
+      <input type="text" name="fname" class="form-control" placeholder="İsim">
+      <input type="text" name="lname" class="form-control" placeholder="Soyisim">
+      <input type="text" name="city" class="form-control" placeholder="Memleket">
+      <button type="submit">Yazdır</button>
+   </form>
+   
+   
+   <div id="mainjs3"></div>
+   <br><br>
+   <div id="mainjs2">
+      <button onclick="kutuK()">kutuyu küçült</button>
+      <button onclick="kutuB()">kutuyu büyüt</button>
+      <br><br>
+   </div>
+   <div class="div1 showup"></div>
+   <br><br><br><br><br><br>
+
+   <div class="d-flex justify-content-center">
+      <h3 class="btn btn-secondary mx-auto fs-1 myscrollanimate">Lorem ipsum dolor sit amet.</h3>
+   </div>
+   
+   <div id="mainjs">
+
+   </div>
    <div id="myslidercon">
       
       <div class="btnleft d-flex align-items-center" onclick="btnLeft()"><i class="fas fa-angle-left"></i></div>
@@ -192,12 +268,14 @@
             <div class="myslider"><div class="card">4</div></div>
             <div class="myslider"><div class="card">5</div></div>
             <div class="myslider"><div class="card">6</div></div>
+            <div class="myslider"><div class="card">7</div></div>
+            <div class="myslider"><div class="card">8</div></div>
          </div>
       </div>
       <div class="btnright d-flex align-items-center" onclick="btnRight()"><i class="fas fa-angle-right"></i></div>
    </div>
    
-   <br><br><br><br><br><br>
+   
    <div id="div-con">
       <div class="div1">0<div id="dv1"></div></div>
       <div class="div1">1<div id="dv2"></div></div>
@@ -296,6 +374,7 @@
    </div>
    <hr> -->
    
+   <div class="trr">asasd</div>
    
    <!-- <div class="div1"></div>
    <div class="div2"></div>
@@ -313,8 +392,60 @@
    <p id="p1">Günün konusunu siz seçin</p> -->
    
    <!-- MDB -->
+   <script src="js/jquery-3.7.0.min.map"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
    <script src="js/script.js"></script>
+   <script>
+
+
+      const tl = (tr)=>{
+         let trt = document.querySelector(tr);
+         return trt
+      }
+      
+      let trr = tl(".trr")
+      console.log(trr);
+      trr.innerHTML = "MERHABA tr"
+      
+      $(document).ready(()=>{
+
+         let idkutu = $("#kutu1").text("merhaba jquery")
+
+         idkutu.css("display","none")
+         idkutu.slideDown("drop")
+         idkutu.slideToggle(2000)
+         idkutu.slideToggle(2000)
+         
+         
+         let kutuclass = $(".kutu1");
+         // animate({özellik}, süre, tamamlandı)
+         // kutuclass.animate({left:"50px"},2000,()=>{})  
+         
+         kutuclass.on("click", ()=>{
+            kutuclass.animate({
+               margin:"50px"
+            }, 3000, ()=>{
+               $("#kutu1").animate({
+                  opacity: 0.8,
+                  marginLeft:"50px",
+                  backgroundColor: '#4E1402'
+               }, 2000,()=>{
+                  kutuclass.fadeOut()
+               })
+            })
+         })
+   
+         let animate1 = (newfunc) =>{
+            $("#kutu1").animate({opacity: 0.8,marginLeft: "50px",backgroundColor: '#4E1402'}, 2000,newfunc )
+         }
+      })
+      
+
+      
+   </script>
+   
+  
 </body>
 
 </html>

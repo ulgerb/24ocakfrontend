@@ -1,0 +1,23 @@
+.navbar{
+   height: 90px;
+   background: brown;
+   align-items: center;
+}
+.logo{
+   width: 100px;
+   height: 80%;
+}
+.logo img{
+   height: 100%;
+}
+.link{
+   list-style-type: none;
+}
+.item{
+   padding: 10px 20px;
+}
+.item a{
+   text-decoration: none;
+   color: #eee;
+   font-size: 24px;
+}

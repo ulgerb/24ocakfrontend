@@ -1672,8 +1672,8 @@ const mySubmit = (event)=>{
 let slider_body = document.querySelector(".slider-body");
 let transx = 0;
 let sliderwidth = 160;
-let showbox = 5;
-slider_body.parentElement.style.width = (sliderwidth * showbox)+"px";
+let showbox = 3;
+slider_body.parentElement.style.width = (sliderwidth * showbox)+"px"; // slider görüntülenen element sayısı
 let bodyleftcont = slider_body.childElementCount - showbox;
 let bodyleftif = bodyleftcont * sliderwidth;
 
@@ -1699,54 +1699,202 @@ const btnRight =()=>{
 // preEventDefault(), nextElementSibling, previousElementSibling,parentElement, onchange, oninput, window.location, onsubmit,target
 
 // eventlere bakılcak
+// create element
 
-// // header oluşturun width değeri 100 olan navbar küçült buttonuna basıldığında width değeri 50% ye düşsün 
-// var header = document.getElementById("header")
-// var change = true
 
-// function changeHeader() {
-//     if (change === true) {
-//         header.style.width = "50%";
-//     } else if (change === false) {
-//         header.style.width = "100%";
-//     }
-//     change = !change;
+
+// let mainjs = document.getElementById("mainjs");
+// let div1 = document.createElement("div");
+// mainjs.appendChild(div1);
+// div1.style.width = "150px";
+// div1.style.height = "150px";
+// div1.style.background = "black";
+
+// alıştırma === kutu oluşturun width değeri 300px olsun
+// buttonuna basıldığında width değeri 50% ye düşsün
+// let mainjs2 = document.getElementById("mainjs2");
+// let div2 = document.createElement("div");
+// let div2wid = 300;
+// div2.style.width = div2wid+"px";
+// div2.style.height = "150px";
+// div2.style.background = "purple";
+// div2.style.transition = "1s";
+// div2.style.border = "4px solid black";
+// mainjs2.appendChild(div2)
+
+// const kutuK = ()=>{
+//     div2wid -= 20;
+//     div2.style.width = (div2wid) +"px";
 // }
 
-// changemenu = true;
-// var navBar = () => {
-//     var menu = document.querySelector(".menu")
-//     if (changemenu === true) {
-//         menu.style.display = "flex";
-//     } else {
-//         menu.style.display = "none";
-//     }
-//     changemenu = !changemenu;
+// const kutuB = ()=>{
+//     div2wid += 20;
+//     div2.style.width = (div2wid) +"px";
 // }
 
-// var drop = document.getElementById("drop");
-// drop.addEventListener("click", ()=>{
-//     var dropmenu = document.querySelector(".dropmenu");
+// alıştırma === bir a etiketi oluşturun, oluşturduğunuz a etiketine
+// text ve link gönderin,
 
-//     if (changemenu === true) {
-//         dropmenu.style.display = "block";
-//     } else {
-//         dropmenu.style.display = "none";
+// let mainjs3 = document.getElementById("mainjs3");
+// let a1 = document.createElement("a");
+// mainjs3.appendChild(a1);
+// a1.innerText = "github";
+// a1.href = "https://github.com/ulgerb/proje03ocak";
+
+// alıştırma === sağ sol butonları tasarlayın, butonlarla bir hayvan iconunu
+// sağa sola yukarı aşağı hareket ettirin.
+// (html içerisine svg image gönderin, position: absolute olup left top verilebilir )
+
+// let bird = document.getElementById("bird");
+// let movex = 20;
+// let movey = 120;
+
+// const rightBird = ()=>{
+//     bird.style.transform = "rotateY(180deg)";
+//     movex += 20
+//     bird.style.left = movex+"px";
+// }
+// const leftBird = ()=>{
+//     bird.style.transform = "rotateY(0deg)";
+//     movex -= 20
+//     bird.style.left = movex+"px";
+// }
+// const upBird = ()=>{
+//     movey -= 20
+//     bird.style.top = movey+"px";
+// }
+// const downBird = ()=>{
+//     movey += 20
+//     bird.style.top = movey+"px";
+// }
+
+// let movex = 20;
+// let movey = 120;
+// let speed = 50;
+
+// window.addEventListener("keypress", (event)=>{
+//     let keyp = event.key;
+//     if(keyp === "a"){
+//         movex -= speed; // 0 -20 -40 -60 -80
+//         bird.style.left = movex+"px"; 
+//         bird.style.transform = "rotateY(0deg)";
+//     }else if (keyp === "d"){
+//         movex += speed;
+//         bird.style.left = movex + "px";
+//         bird.style.transform = "rotateY(180deg)";
+//     }else if(keyp === "w"){
+//         movey -= speed;
+//         bird.style.top = movey + "px"; 
+//     }else if(keyp === "s"){
+//         movey += speed;
+//         bird.style.top =movey+"px";    }
+// })
+
+
+// let myelement = document.querySelector(".myscrollanimate");
+
+
+// window.addEventListener("scroll", (event)=>{
+//     // console.log(document.documentElement.scrollTop);
+//     let sy = window.scrollY; 
+//     if (sy >= 300){
+//         myelement.style.transform = "translateY(0px)"
+//     }else{
+//         myelement.style.transform = "translateY(120px)"
 //     }
-//     changemenu = !changemenu;
 // })
 
+// let div1 = document.createElement("div");
+// div1.style.height = "20px";
+// div1.style.width = "20px";
+// div1.style.background = "darkred";
+// div1.style.position ="absolute";
+// div1.style.top ="0px";
+// div1.style.left = "0px";
+// div1.style.transition = ".4s";
+// document.body.appendChild(div1);
 
+// window.addEventListener("mousemove", (event)=>{
+//     let mouseX = event.pageX;
+//     let mouseY = event.pageY;
+//     document.getElementById("title").innerText = "X: "+mouseX+" - "+"Y: "+mouseY; 
+//     div1.style.transform = `translate(${mouseX -30}px, ${mouseY+20}px)`;
+// })
 
-// var drop = document.getElementById("drop");
-// drop.addEventListener("mouseenter", () => {
-//     var dropmenu = document.querySelector(".dropmenu");
-//     dropmenu.style.display = "block";
+// let boxt = false;
+// window.addEventListener("transitionend", (event)=>{
+//     boxt = true;
+//     div1.style.background = "green";
+//     // div1.style.transform = div1.style.transform + " rotate(400deg)";
 // })
-// drop.addEventListener("mouseleave", () => {
-//     var dropmenu = document.querySelector(".dropmenu");
-//     dropmenu.style.display = "none";
-// })
+
+// form target içerisindeki tüm inputları liste olarak al ??
+// ÖDEV === bir form oluşturun oluşturulan formdaki verileri html içerisine yazdır.
+// let form5 = document.getElementById("form5");
+// const Form5 = (event)=>{
+//     form5.innerText = event.target.fname.value + event.target.lname.value + event.target.city.value
+//     event.preventDefault();
+// }
+
+// ÖDEV === input içerisindeki girilen rengi anlık olarak değiştirin.
+// const inputColor = (e)=>{
+//     e.style.background = e.value;
+// }
+
+// ÖDEV === 20px,20px kırmızı kutu oluşturun, kutuya zıplama işlevi kazandırın,
+// ve bu kutu hareket etsin, 
+// ZOR ÖDEV kutu oyunu tasarlayın engellerden zıplayarak varış noktasına ulaşmaya çalısın
+let box1 = document.getElementById("box1");
+let mainbox = document.getElementById("mainbox");
+mainbox.style.width = "100%";
+mainbox.style.height = "70vh";
+mainbox.style.background = "#00000030";
+mainbox.style.border = "2px solid #000";
+mainbox.style.display = "flex";
+mainbox.style.alignItems = "end";
+
+box1.style.width = "50px";
+box1.style.height = "50px";
+box1.style.background = "lightblue";
+box1.style.border = "2px solid black";
+box1.style.transition = "all .4s";
+box1.style.position = "relative";
+box1.style.left = "0px";
+box1.style.top = "0px";
+
+// SET inteval, out
+
+// setInterval(()=>{}, 1000) // (funksiyon, saniye) sürekli çalışır
+// setTimeout(()=>{}, 1000) // (funksiyon, saniye) süre bitince bir kere çalışır
+
+// setInterval(timeClock, 1000)
+// let time = 0
+// function timeClock(){
+//     console.log(time);
+//     time +=1
+// }
+
+// setTimeout(()=>{
+//     console.log("merhaba");
+// }, 5000)
+
+posx = 0;
+posy = 0;
+window.addEventListener("keypress", (e)=>{
+    console.log(e.key);
+    if(e.key == "d"){
+        posx += 50;
+        box1.style.left = posx+"px";
+    }else if (e.key == "a"){
+        posx -= 50;
+        box1.style.left = posx+"px";
+    }else if (e.key == "w"){
+
+        setTimeout(() => { box1.style.transition = "all .8s"; box1.style.top = "-120px" },300)
+        setTimeout(() => { box1.style.transition = "all .6s"; box1.style.top = "0px" },700)
+    } 
+    
+})
 
 
 // ÖDEV
@@ -1756,13 +1904,47 @@ const btnRight =()=>{
 //  form içindeki inputlar disabled olucak tekrar tıklandığın etkin hale gelicek
 
 
-
-
 // ÖDEV
 // dropdown menü yapılıcak, ok
 //  hamburger menu tasarlanıcak,
 // form oluşturun oluşturulan formda buton olucak butona basıldığında
 //  form içindeki inputlar disabled olucak tekrar tıklandığın etkin hale gelicek
+
+
+// TATİL ÖDEVLERİ BİREYSEL GELİŞİM
+// ÖDEV 
+// kendinize scroll animasyon fonksiyonu oluşturun
+// let mainheader = document.querySelector(".mainheader")
+// window.addEventListener("scroll", (e)=>{
+//     console.log(window.scrollY);
+//     if(window.scrollY > 400){
+//         console.log("======================");
+//         mainheader.style.background = "green";
+//     }else if (window.scrollY <= 400){
+//         mainheader.style.background = "crimson";
+//     }
+//     console.log(mainheader);
+// })
+
+
+// let showup = document.querySelector(".showup");
+// window.addEventListener("scroll", ()=>{
+
+//     if (window.scrollY > 700){
+//         showup.style.transform = "translate(0)";
+//         showup.style.opacity = "100"
+//     }
+    
+// })
+
+
+// ÖDEV
+// keypress özelliği kullanarak bir nesneyi hareket ettirin
+// ÖDEV
+// fareyi takip eden bir cisim tasarlayın
+// ÖDEV 
+// tasarlanan cisim animasyon özelliği durduğunda bir özellik ekleyin 
+
 
 // const move = document.getElementById("move")
 // const ey1 = document.getElementById("ey1")
@@ -1773,7 +1955,6 @@ const btnRight =()=>{
 //     var y = (e.offsetY - 200) / 20;
 //     ey1.style.transform = "translate(" + x + "px, " + y * 1.3 + "px)";
 //     ey2.style.transform = "translate(" + x * 1.6 + "px, " + y + "px)";
-
 // })
 
 // const disableB = () => {
@@ -1832,134 +2013,165 @@ const btnRight =()=>{
 //     */
 // }
 
-/*
-    var kutuid = $("#kutuid")
 
-        kutuid.click(function(){
-            $(".bx1").animate({
-                margin:"20px",
-                width:"200px",
-                translate:"200px"
-            },1000, function () {
-                $(".bx2").animate({
-                    opacity:"0.4",
-                    width: "50px",
-                    translate: "100px"
-                }, 1000,)})
 
-            $(".bx3").animate({
-                left: "+=50"
-            },50)
-        })
+// === JQUERY ===
+
+
+let classkutu1 = $(".kutu1");
+let idkutu1 = $("#kutu1");
+console.log(classkutu1);
+console.log(idkutu1);
+
+classkutu1.css("width","50px")
+classkutu1.css("height","50px")
+classkutu1.css("background","red")
+
+idkutu1.css({
+    width:"50px",
+    height:"50px",
+    background:"green"
+})
+
+classkutu1.addClass("dd1")
+idkutu1.addClass("dd1")
+idkutu1.removeClass("dd1")
+
+
+idkutu1.click(()=>{
+    idkutu1.toggleClass("dd1");
+})
+
+idkutu1.on("dblclick")
+
+
+
+// var kutuid = $("#kutuid")
+
+//     kutuid.click(function(){
+//         $(".bx1").animate({
+//             margin:"20px",
+//             width:"200px",
+//             translate:"200px"
+//         },1000, function () {
+//             $(".bx2").animate({
+//                 opacity:"0.4",
+//                 width: "50px",
+//                 translate: "100px"
+//             }, 1000,)})
+
+//         $(".bx3").animate({
+//             left: "+=50"
+//         },50)
+//     })
+
+    
+
+//     $("#kutuid2").click(function(){
+//             $(".bx3").animate({
+//             left: "-=50"
+//         }, 50)
+//     })
+
+//     window.$("#kutuid2").keypress("d");
+    
+    
+
+//     // 1) id olarak seçin, seçilen id css özellikleri jq ile verilecektir. width height 150px, bg red, 
+
+//     // 2) dropdown toggle yapılıcak, tıklanınca menü açılıp kapanıcak
+
+//     var droplink = $(".drop-link")
+//     var dropmadde = $(".drop-madde")
+//     dropmadde.slideToggle(0)
+    
+//     droplink.click(function(){
+//         dropmadde.slideToggle(500)
+//     })
+    
+//     var kutuid = $("#kutuid")
+
+//     kutuid.css({
+//         width: 200,
+//         height: 200,
+//         background: "red"
+//     })
+    
+    
+//     var x = 15;
+//     x==10 ? x++ : x--;
+//     console.log(x);
+
+
+
+//     function tl(sec){
+//         return document.querySelector(sec)
+//     }
+//     function style(sec,css){
+//         return sec.style.cssText = "+"+ css +"+";
+//     }
+
+//     style(tl(".div2"), "width:200px;height:200px;background:red;")
+    
+//     console.log(tl(".div2"))
+
+    
+//     var div1 = $(".div1")
+//     function shToggle(){
+//         div1.toggle(2000)
+        
+        
+//     }
+    
+//     $(".div2").click(function (){
+//         div1.slideToggle(200)
+//     })
+    
+    
+    
+    
+//     var box3 = $(".box3")
+
+//     box3.css({
+//         width:200,
+//         height:200,
+//         background:"blue",
+//     })
+
+//     function infSlide(){
+//         box3.slideUp(2000,function(){  
+//             box3.slideDown(1000, infSlide())
+//         })
+//     }
 
         
 
-        $("#kutuid2").click(function(){
-             $(".bx3").animate({
-                left: "-=50"
-            }, 50)
-        })
+    
+//     $(".box1").fadeIn(5000, ()=>{
+//         $(".box1").css({
+//             "background": "black",
+//             border: "4px solid red",
+//         })
+//     })
 
-        window.$("#kutuid2").keypress("d");
-        
-        
+//     $(".box1").fadeOut(4000)
 
-        // 1) id olarak seçin, seçilen id css özellikleri jq ile verilecektir. width height 150px, bg red, 
+//     var box2 = $(".box2")
 
-        // 2) dropdown toggle yapılıcak, tıklanınca menü açılıp kapanıcak
+//     box2.fadeToggle(2000)
+//     $(".box2").fadeToggle(2000)
+//     box2.addClass("border")
+//     box2.removeClass("border")
+//     box2.toggleClass("border")
+    
+    
+//     box2.hover(function(){
+//         $(this).addClass("bg");
+//     },
+//         function () {
+//             $(this).addClass("bg");
+//         }, function () {
+//             $(this).removeClass("bg");
+//         }
+//     )
 
-        var droplink = $(".drop-link")
-        var dropmadde = $(".drop-madde")
-        dropmadde.slideToggle(0)
-        
-        droplink.click(function(){
-            dropmadde.slideToggle(500)
-        })
-        
-        var kutuid = $("#kutuid")
-
-        kutuid.css({
-            width: 200,
-            height: 200,
-            background: "red"
-        })
-        
-        
-        var x = 15;
-        x==10 ? x++ : x--;
-        console.log(x);
-
-
-
-        function tl(sec){
-            return document.querySelector(sec)
-        }
-        function style(sec,css){
-            return sec.style.cssText = "+"+ css +"+";
-        }
-
-        style(tl(".div2"), "width:200px;height:200px;background:red;")
-        
-        console.log(tl(".div2"))
-
-        
-        var div1 = $(".div1")
-        function shToggle(){
-            div1.toggle(2000)
-            
-            
-        }
-        
-        $(".div2").click(function (){
-            div1.slideToggle(200)
-        })
-        
-        
-        
-        
-        var box3 = $(".box3")
-
-        box3.css({
-            width:200,
-            height:200,
-            background:"blue",
-        })
-
-        function infSlide(){
-            box3.slideUp(2000,function(){  
-                box3.slideDown(1000, infSlide())
-            })
-        }
-
-            
-
-        
-        $(".box1").fadeIn(5000, ()=>{
-            $(".box1").css({
-                "background": "black",
-                border: "4px solid red",
-            })
-        })
-
-        $(".box1").fadeOut(4000)
-
-        var box2 = $(".box2")
-
-        box2.fadeToggle(2000)
-        $(".box2").fadeToggle(2000)
-        box2.addClass("border")
-        box2.removeClass("border")
-        box2.toggleClass("border")
-       
-        
-        box2.hover(function(){
-            $(this).addClass("bg");
-        },
-            /*function () {
-                $(this).addClass("bg");
-            }, function () {
-                $(this).removeClass("bg");
-            }
-        )
-
-*/
