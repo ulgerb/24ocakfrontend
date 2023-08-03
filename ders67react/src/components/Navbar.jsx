@@ -36,6 +36,9 @@ function Navbar() {
                      <li className="nav-item">
                         <Link className="nav-link" to="/İletişim">İletişim</Link>
                      </li>
+                     <li className="nav-item">
+                        <Link className="nav-link" to="/KartEkle">Kart Ekle</Link>
+                     </li>
                   </ul>
 
                   <div className="d-flex align-items-center">

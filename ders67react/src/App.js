@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Cardadd from "./pages/Cardadd";
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
               <Route path="/" Component={Home} /> 
               <Route path="/Hakkımızda" Component={About} /> {/* url'e Hakkımızda yazınca About componenti çalışır */}
               <Route path="/İletişim" Component={Contact} /> 
+              <Route path="/KartEkle" Component={Cardadd} /> 
             </Routes>
           </BrowserRouter>
 
